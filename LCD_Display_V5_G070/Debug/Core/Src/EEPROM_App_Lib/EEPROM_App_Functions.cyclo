@@ -1,0 +1,4 @@
+../Core/Src/EEPROM_App_Lib/EEPROM_App_Functions.c:16:6:EEPROM_App_Read_Settings	4
+../Core/Src/EEPROM_App_Lib/EEPROM_App_Functions.c:34:6:EEPROM_App_Write_Settings	2
+../Core/Src/EEPROM_App_Lib/EEPROM_App_Functions.c:46:6:EEPROM_App_Read_Metering	2
+../Core/Src/EEPROM_App_Lib/EEPROM_App_Functions.c:64:6:EEPROM_App_Write_Metering	2

@@ -1,0 +1,7 @@
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h:2429:22:LL_RCC_SetRTCClockSource	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h:2443:26:LL_RCC_GetRTCClockSource	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h:2453:22:LL_RCC_EnableRTC	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h:2483:22:LL_RCC_ForceBackupDomainReset	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h:2493:22:LL_RCC_ReleaseBackupDomainReset	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_bus.h:467:22:LL_APB1_GRP1_EnableClock	1
+../Core/Src/rtc.c:28:6:MX_RTC_Init	2

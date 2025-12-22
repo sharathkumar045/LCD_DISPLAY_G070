@@ -1,0 +1,15 @@
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_i2c.h:790:22:LL_I2C_SetMasterAddressingMode	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_i2c.h:1552:26:LL_I2C_IsActiveFlag_TXE	2
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_i2c.h:1565:26:LL_I2C_IsActiveFlag_TXIS	2
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_i2c.h:1578:26:LL_I2C_IsActiveFlag_RXNE	2
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_i2c.h:1891:22:LL_I2C_DisableAutoEndMode	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_i2c.h:1950:22:LL_I2C_SetTransferSize	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_i2c.h:2001:22:LL_I2C_GenerateStopCondition	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_i2c.h:2079:22:LL_I2C_SetSlaveAddr	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_i2c.h:2225:25:LL_I2C_ReceiveData8	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_i2c.h:2237:22:LL_I2C_TransmitData8	1
+../Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Functions.c:17:6:EEPROM_Drv_Init	1
+../Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Functions.c:31:9:EEPROM_Drv_Read_Byte	8
+../Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Functions.c:104:6:EEPROM_Drv_Write_Byte	10
+../Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Functions.c:187:6:EEPROM_Drv_Read_Array	9
+../Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Functions.c:352:6:EEPROM_Drv_Write_Array	11

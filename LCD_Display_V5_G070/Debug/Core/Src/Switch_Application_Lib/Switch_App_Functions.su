@@ -1,0 +1,6 @@
+../Core/Src/Switch_Application_Lib/Switch_App_Functions.c:10:6:Switch_1ms_Interrupt_Fn	8	static
+../Core/Src/Switch_Application_Lib/Switch_App_Functions.c:51:6:Switch_Incrmnt_Detect	8	static
+../Core/Src/Switch_Application_Lib/Switch_App_Functions.c:79:6:Switch_Decrmnt_Detect	8	static
+../Core/Src/Switch_Application_Lib/Switch_App_Functions.c:104:6:Switch_Set_Detect	8	static
+../Core/Src/Switch_Application_Lib/Switch_App_Functions.c:134:6:Switch_Enter_Detect	8	static
+../Core/Src/Switch_Application_Lib/Switch_App_Functions.c:164:6:Switch_Set_and_Enter_Detect	8	static

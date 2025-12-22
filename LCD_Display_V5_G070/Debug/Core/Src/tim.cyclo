@@ -1,0 +1,9 @@
+../Drivers/CMSIS/Include/core_cm0plus.h:741:22:__NVIC_EnableIRQ	2
+../Drivers/CMSIS/Include/core_cm0plus.h:850:22:__NVIC_SetPriority	2
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_bus.h:921:22:LL_APB2_GRP1_EnableClock	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_tim.h:1777:22:LL_TIM_DisableARRPreload	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_tim.h:3365:22:LL_TIM_SetClockSource	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_tim.h:3411:22:LL_TIM_SetTriggerOutput	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_tim.h:3441:22:LL_TIM_SetTriggerOutput2	1
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_tim.h:3511:22:LL_TIM_DisableMasterSlaveMode	1
+../Core/Src/tim.c:28:6:MX_TIM1_Init	1

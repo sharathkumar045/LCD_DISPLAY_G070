@@ -1,0 +1,4 @@
+../Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.c:18:15:U1Mast_Drv_crcFast	40	static
+../Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.c:32:6:U1Mast_Drv_Receive_ISR_Program	8	static
+../Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.c:127:6:U1Mast_Drv_Send_Function_Inside_Timer_Interrupt	8	static
+../Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.c:144:6:U1Mast_Drv_Variables_Init	8	static
