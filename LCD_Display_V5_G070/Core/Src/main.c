@@ -143,7 +143,7 @@ int main(void)
 //  GPIOB->ODR &= ~LCD_Back_Light_Pin;
 //  GPIOB->BSRR |= LCD_Back_Light_Pin;
   LL_GPIO_SetOutputPin(LCD_Backlight_GPIO_Port,LCD_Back_Light_Pin);
-  LL_GPIO_SetOutputPin(Buzzer_GPIO_Port,Buzzer_Pin);
+//  LL_GPIO_SetOutputPin(Buzzer_GPIO_Port,Buzzer_Pin);
 
 
 

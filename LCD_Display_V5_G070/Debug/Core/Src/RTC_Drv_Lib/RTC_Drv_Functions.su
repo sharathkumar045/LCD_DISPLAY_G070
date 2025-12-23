@@ -15,10 +15,11 @@
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rtc.h:1471:26:LL_RTC_DATE_GetWeekDay	16	static
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rtc.h:1525:26:LL_RTC_DATE_GetMonth	16	static
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rtc.h:1555:26:LL_RTC_DATE_GetDay	16	static
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rtc.h:1923:22:LL_RTC_ALMA_ConfigTime	32	static
 ../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:17:6:RTC_Drv_Init	16	static
 ../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:30:6:RTC_Drv_Get_Ext_Date_Time	40	static
 ../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:119:6:RTC_Drv_Set_Ext_Date_Time	16	static
 ../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:129:6:RTC_Drv_Ext_Write_Byte	16	static
 ../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:188:6:RTC_Drv_Set_Intrnl_From_Ext	32	static
 ../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:207:6:RTC_Drv_Get_Intrnl_Date_Time	16	static
-../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:224:6:RTC_Drv_Intrnl_Alarm_Init	8	static
+../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:224:6:RTC_Drv_Intrnl_Alarm_Init	16	static

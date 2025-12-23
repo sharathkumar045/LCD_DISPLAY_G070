@@ -35,7 +35,7 @@
 #define UART1_Clear_Receive_Flag USART2->CR1|=USART_RQR_RXFRQ
 #define UART1_Clear_Overflow_Flag USART2->ICR|=USART_ICR_ORECF
 #define UART1_Rec_Data_Register USART2->RDR
-#define UART1_Disable_Recv_INT USAR2->CR1&=(~LL_USART_CR1_RXNEIE)
+#define UART1_Disable_Recv_INT USART2->CR1&=(~LL_USART_CR1_RXNEIE)
 
 
 

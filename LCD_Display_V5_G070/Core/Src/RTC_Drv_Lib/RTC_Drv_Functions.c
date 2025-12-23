@@ -238,7 +238,7 @@ void RTC_Drv_Intrnl_Alarm_Init(void)
 //	  }
 //	  LL_RTC_ALMA_SetMask(RTC,LL_RTC_ALMA_MASK_DATEWEEKDAY);
 //
-//	  LL_RTC_ALMA_ConfigTime(RTC,LL_RTC_ALMA_TIME_FORMAT_AM, RTC_Alarm_Hour, RTC_Alram_Min, 0);
+	  LL_RTC_ALMA_ConfigTime(RTC,LL_RTC_ALMA_TIME_FORMAT_AM, RTC_Alarm_Hour, RTC_Alram_Min, 0);
 
 	  RTC->CR = RTC_CR_ALRAIE | RTC_CR_ALRAE; /* (5) */
 	  RTC->WPR = 0xFE; /* (6) */

@@ -177,13 +177,13 @@ void TIM1_BRK_UP_TRG_COM_IRQHandler(void)
 		}
 	}
 
-	if(RTC_Alarm_Flag)
-	{
-		RTC_Drv_Set_Intrnl_From_Ext();
-		State = Daily_Reset;
-		Disp_Cntrl.First_Time_State_Entry = 1;
-		RTC_Alarm_Clr_Flag;
-	}
+//	if(RTC_Alarm_Flag)
+//	{
+//		RTC_Drv_Set_Intrnl_From_Ext();
+//		State = Daily_Reset;
+//		Disp_Cntrl.First_Time_State_Entry = 1;
+//		RTC_Alarm_Clr_Flag;
+//	}
 
 	if(State == Metering)
 	{
