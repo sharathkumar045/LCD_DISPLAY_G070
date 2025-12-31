@@ -256,8 +256,8 @@ void U1Mast_App_Populate_And_Send_Txdata_Array_With_Message_Settings(void)
 		UART1_Txdata[23]=(0x00FF & 2049);
 		UART1_Txdata[24]=((0xFF00 & 2049)>>8);
 
-      UART1_Txdata[25]=(0x00FF & 2459);
-      UART1_Txdata[26]=((0xFF00 & 2459)>>8);
+        UART1_Txdata[25]=(0x00FF & 2459);
+        UART1_Txdata[26]=((0xFF00 & 2459)>>8);
 
 		UART1_Txdata[27]=(0x00FF & 1950);
 		UART1_Txdata[28]=((0xFF00 & 1950)>>8);
@@ -391,11 +391,17 @@ void U1Mast_App_Populate_And_Send_Txdata_Array_With_Msg_Calib(void)
 	UART1_Txdata[7] = (0xff & Calib_Value[4]);
 	UART1_Txdata[8] = (0xff & Calib_Value[4]) >>8;
 
-	UART1_Txdata[9] =  (Calib_Value[5]);
-	UART1_Txdata[10] = ( Calib_Value[5]>>8);
+	UART1_Txdata[9] = (0xff & Calib_Value[4]);
+	UART1_Txdata[10] = (0xff & Calib_Value[4]) >>8;
 
-	UART1_Txdata[11] = (uint8_t)(Calib_Value[6]);
-	UART1_Txdata[12] = (uint8_t)(Calib_Value[6]>>8);
+	UART1_Txdata[11] = (0xff & Calib_Value[4]);
+	UART1_Txdata[12] = (0xff & Calib_Value[4]) >>8;
+
+//	UART1_Txdata[9] =  (Calib_Value[5]);
+//	UART1_Txdata[10] = ( Calib_Value[5]>>8);
+//
+//	UART1_Txdata[11] = (uint8_t)(Calib_Value[6]);
+//	UART1_Txdata[12] = (uint8_t)(Calib_Value[6]>>8);
 
 	UART1_Txdata[13] = (0xff & Calib_Value[7]);
 	UART1_Txdata[14] = (0xff & Calib_Value[7]) >>8;
@@ -554,11 +560,11 @@ void U1Mast_App_Use_Received_Data_m(void)
 		j = j+1;
 	}
 
-	Disp_Metrng_Calib_Value[3] = Disp_Metering_Value[7];             //I_INV
-	Disp_Metrng_Calib_Value[5] = Disp_Metering_Value[2];             //V_PV
-	Disp_Metrng_Calib_Value[6] = Disp_Metering_Value[3];             //I_PV
-	Disp_Metrng_Calib_Value[7] = Disp_Metering_Value[6];             //V_MAINS
-	Disp_Metrng_Calib_Value[8] = Disp_Metering_Value[8];             //I_MAINS
+	Disp_Metrng_Calib_Value[3] = Disp_Metering_Value[7];                    //I_INV
+	Disp_Metrng_Calib_Value[5] = Disp_Metering_Value[2];                    //V_PV
+	Disp_Metrng_Calib_Value[6] = Disp_Metering_Value[3];                    //I_PV
+	Disp_Metrng_Calib_Value[7] = Disp_Metering_Value[6];                    //V_MAINS
+	Disp_Metrng_Calib_Value[8] = Disp_Metering_Value[8];                    //I_MAINS
 
 	Disp_Desired_Metrng_Calib_Value[3] = Disp_Metering_Value[7];             //I_INV
 	Disp_Desired_Metrng_Calib_Value[5] = Disp_Metering_Value[2];             //V_PV

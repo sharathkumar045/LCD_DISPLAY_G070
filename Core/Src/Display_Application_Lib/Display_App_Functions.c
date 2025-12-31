@@ -239,12 +239,12 @@ void Display_Variables_Init()
 	Disp_Metering_Value_Scaler[2] = 0.18228;//V PV
 	Disp_Metering_Value_Scaler[3] = 0.023;//I PV
 	Disp_Metering_Value_Scaler[4] = 0.01717;                       //0.00859;                         //PV KW   // changed
-	Disp_Metering_Value_Scaler[5] = 1;//PV KWH
+	Disp_Metering_Value_Scaler[5] = 0.01;//PV KWH
 	Disp_Metering_Value_Scaler[6] = 0.119;//V Mains
 	Disp_Metering_Value_Scaler[7] = 0.023;//I Inv Pri
 	Disp_Metering_Value_Scaler[8] = 0;//I Mains CT
 	Disp_Metering_Value_Scaler[9] = 1;//T Grid
-	Disp_Metering_Value_Scaler[10] = 0.011469;                   //0.0056;                               //Grid KVA
-	Disp_Metering_Value_Scaler[11] = 1;//Export KWH
+	Disp_Metering_Value_Scaler[10] = 0.011210;                   //0.0056;                               //Grid KVA
+	Disp_Metering_Value_Scaler[11] = 0.01;//Export KWH
 	Disp_Metering_Value_Scaler[12] = 1;//Import KWH
 }

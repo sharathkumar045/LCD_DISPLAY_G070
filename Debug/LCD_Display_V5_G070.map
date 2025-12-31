@@ -178,6 +178,8 @@ Discarded input sections
                 0x00000000        0x4 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
  .rodata.Disp_Calib_Name
                 0x00000000       0x78 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+ .data.Calib_Value_Updated
+                0x00000000       0x18 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
  .bss.Disp_Calib_Set_Value
                 0x00000000       0x18 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
  .debug_macro   0x00000000      0xaf0 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
@@ -3564,7 +3566,7 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x08000000                g_pfnVectors
                 0x080000b8                        . = ALIGN (0x4)
 
-.text           0x080000b8     0x77c0
+.text           0x080000b8     0x77b0
                 0x080000b8                        . = ALIGN (0x4)
  *(.text)
  .text          0x080000b8       0x48 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
@@ -3763,607 +3765,607 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x08002e20       0xac ./Core/Src/Main_Functions.o
                 0x08002e20                Whileloop_Calib_Update_and_Send_Fn
  .text.Calibration_Update
-                0x08002ecc       0x74 ./Core/Src/Main_Functions.o
+                0x08002ecc       0x70 ./Core/Src/Main_Functions.o
                 0x08002ecc                Calibration_Update
  .text.Whileloop_Setting_Fn
-                0x08002f40      0x16c ./Core/Src/Main_Functions.o
-                0x08002f40                Whileloop_Setting_Fn
+                0x08002f3c      0x16c ./Core/Src/Main_Functions.o
+                0x08002f3c                Whileloop_Setting_Fn
  .text.Whileloop_Setting_Data_Rq_EEPROM_Fn
-                0x080030ac      0x13c ./Core/Src/Main_Functions.o
-                0x080030ac                Whileloop_Setting_Data_Rq_EEPROM_Fn
+                0x080030a8      0x13c ./Core/Src/Main_Functions.o
+                0x080030a8                Whileloop_Setting_Data_Rq_EEPROM_Fn
  .text.Whileloop_Save_Setting_in_EEPROM_Fn
-                0x080031e8       0xe8 ./Core/Src/Main_Functions.o
-                0x080031e8                Whileloop_Save_Setting_in_EEPROM_Fn
+                0x080031e4       0xe8 ./Core/Src/Main_Functions.o
+                0x080031e4                Whileloop_Save_Setting_in_EEPROM_Fn
  .text.Whileloop_User_Reset_Fn
-                0x080032d0       0x70 ./Core/Src/Main_Functions.o
-                0x080032d0                Whileloop_User_Reset_Fn
+                0x080032cc       0x70 ./Core/Src/Main_Functions.o
+                0x080032cc                Whileloop_User_Reset_Fn
  .text.Whileloop_Daily_Reset_Fn
-                0x08003340      0x108 ./Core/Src/Main_Functions.o
-                0x08003340                Whileloop_Daily_Reset_Fn
+                0x0800333c      0x108 ./Core/Src/Main_Functions.o
+                0x0800333c                Whileloop_Daily_Reset_Fn
  .text.Whileloop_Send_Reset_Rq_Fn
-                0x08003448       0x70 ./Core/Src/Main_Functions.o
-                0x08003448                Whileloop_Send_Reset_Rq_Fn
+                0x08003444       0x70 ./Core/Src/Main_Functions.o
+                0x08003444                Whileloop_Send_Reset_Rq_Fn
  .text.Whileloop_Ext_RTC_Set_Time_Date_Fn
-                0x080034b8      0x280 ./Core/Src/Main_Functions.o
-                0x080034b8                Whileloop_Ext_RTC_Set_Time_Date_Fn
+                0x080034b4      0x280 ./Core/Src/Main_Functions.o
+                0x080034b4                Whileloop_Ext_RTC_Set_Time_Date_Fn
  .text.Whileloop_Disp_Time_Date_Fn
-                0x08003738       0xbc ./Core/Src/Main_Functions.o
-                0x08003738                Whileloop_Disp_Time_Date_Fn
+                0x08003734       0xbc ./Core/Src/Main_Functions.o
+                0x08003734                Whileloop_Disp_Time_Date_Fn
  .text.Whileloop_Error_Fn
-                0x080037f4       0xa4 ./Core/Src/Main_Functions.o
-                0x080037f4                Whileloop_Error_Fn
+                0x080037f0       0xa4 ./Core/Src/Main_Functions.o
+                0x080037f0                Whileloop_Error_Fn
  .text.Main_Variables_Init
-                0x08003898       0x38 ./Core/Src/Main_Functions.o
-                0x08003898                Main_Variables_Init
+                0x08003894       0x38 ./Core/Src/Main_Functions.o
+                0x08003894                Main_Variables_Init
  .text.LL_IOP_GRP1_EnableClock
-                0x080038d0       0x2c ./Core/Src/gpio.o
+                0x080038cc       0x2c ./Core/Src/gpio.o
  .text.LL_GPIO_ResetOutputPin
-                0x080038fc       0x18 ./Core/Src/gpio.o
+                0x080038f8       0x18 ./Core/Src/gpio.o
  .text.MX_GPIO_Init
-                0x08003914      0x390 ./Core/Src/gpio.o
-                0x08003914                MX_GPIO_Init
+                0x08003910      0x390 ./Core/Src/gpio.o
+                0x08003910                MX_GPIO_Init
  .text.LL_I2C_EnableClockStretching
-                0x08003ca4       0x20 ./Core/Src/i2c.o
+                0x08003ca0       0x20 ./Core/Src/i2c.o
  .text.LL_I2C_DisableGeneralCall
-                0x08003cc4       0x20 ./Core/Src/i2c.o
+                0x08003cc0       0x20 ./Core/Src/i2c.o
  .text.LL_I2C_SetOwnAddress2
-                0x08003ce4       0x2c ./Core/Src/i2c.o
+                0x08003ce0       0x2c ./Core/Src/i2c.o
  .text.LL_I2C_DisableOwnAddress2
-                0x08003d10       0x20 ./Core/Src/i2c.o
+                0x08003d0c       0x20 ./Core/Src/i2c.o
  .text.LL_I2C_EnableAutoEndMode
-                0x08003d30       0x1e ./Core/Src/i2c.o
- *fill*         0x08003d4e        0x2 
+                0x08003d2c       0x1e ./Core/Src/i2c.o
+ *fill*         0x08003d4a        0x2 
  .text.LL_RCC_SetI2CClockSource
-                0x08003d50       0x30 ./Core/Src/i2c.o
+                0x08003d4c       0x30 ./Core/Src/i2c.o
  .text.LL_APB1_GRP1_EnableClock
-                0x08003d80       0x2c ./Core/Src/i2c.o
+                0x08003d7c       0x2c ./Core/Src/i2c.o
  .text.LL_IOP_GRP1_EnableClock
-                0x08003dac       0x2c ./Core/Src/i2c.o
+                0x08003da8       0x2c ./Core/Src/i2c.o
  .text.MX_I2C1_Init
-                0x08003dd8      0x118 ./Core/Src/i2c.o
-                0x08003dd8                MX_I2C1_Init
+                0x08003dd4      0x118 ./Core/Src/i2c.o
+                0x08003dd4                MX_I2C1_Init
  .text.__NVIC_SetPriority
-                0x08003ef0       0xdc ./Core/Src/main.o
+                0x08003eec       0xdc ./Core/Src/main.o
  .text.LL_RCC_HSI_Enable
-                0x08003fcc       0x1c ./Core/Src/main.o
+                0x08003fc8       0x1c ./Core/Src/main.o
  .text.LL_RCC_HSI_IsReady
-                0x08003fe8       0x28 ./Core/Src/main.o
+                0x08003fe4       0x28 ./Core/Src/main.o
  .text.LL_RCC_LSI_Enable
-                0x08004010       0x1c ./Core/Src/main.o
+                0x0800400c       0x1c ./Core/Src/main.o
  .text.LL_RCC_LSI_IsReady
-                0x0800402c       0x20 ./Core/Src/main.o
+                0x08004028       0x20 ./Core/Src/main.o
  .text.LL_RCC_SetSysClkSource
-                0x0800404c       0x28 ./Core/Src/main.o
+                0x08004048       0x28 ./Core/Src/main.o
  .text.LL_RCC_GetSysClkSource
-                0x08004074       0x18 ./Core/Src/main.o
+                0x08004070       0x18 ./Core/Src/main.o
  .text.LL_RCC_SetAHBPrescaler
-                0x0800408c       0x2c ./Core/Src/main.o
+                0x08004088       0x2c ./Core/Src/main.o
  .text.LL_RCC_SetAPB1Prescaler
-                0x080040b8       0x2c ./Core/Src/main.o
+                0x080040b4       0x2c ./Core/Src/main.o
  .text.LL_RCC_PLL_Enable
-                0x080040e4       0x1c ./Core/Src/main.o
+                0x080040e0       0x1c ./Core/Src/main.o
  .text.LL_RCC_PLL_IsReady
-                0x08004100       0x28 ./Core/Src/main.o
+                0x080040fc       0x28 ./Core/Src/main.o
  .text.LL_RCC_PLL_ConfigDomain_SYS
-                0x08004128       0x40 ./Core/Src/main.o
+                0x08004124       0x40 ./Core/Src/main.o
  .text.LL_RCC_PLL_EnableDomain_SYS
-                0x08004168       0x1c ./Core/Src/main.o
+                0x08004164       0x1c ./Core/Src/main.o
  .text.LL_APB1_GRP1_EnableClock
-                0x08004184       0x2c ./Core/Src/main.o
+                0x08004180       0x2c ./Core/Src/main.o
  .text.LL_APB2_GRP1_EnableClock
-                0x080041b0       0x2c ./Core/Src/main.o
+                0x080041ac       0x2c ./Core/Src/main.o
  .text.LL_FLASH_SetLatency
-                0x080041dc       0x28 ./Core/Src/main.o
+                0x080041d8       0x28 ./Core/Src/main.o
  .text.LL_FLASH_GetLatency
-                0x08004204       0x18 ./Core/Src/main.o
+                0x08004200       0x18 ./Core/Src/main.o
  .text.LL_PWR_EnableBkUpAccess
-                0x0800421c       0x1c ./Core/Src/main.o
- .text.main     0x08004238       0xf4 ./Core/Src/main.o
-                0x08004238                main
+                0x08004218       0x1c ./Core/Src/main.o
+ .text.main     0x08004234       0xf4 ./Core/Src/main.o
+                0x08004234                main
  .text.SystemClock_Config
-                0x0800432c       0x94 ./Core/Src/main.o
-                0x0800432c                SystemClock_Config
+                0x08004328       0x94 ./Core/Src/main.o
+                0x08004328                SystemClock_Config
  .text.LL_RCC_SetRTCClockSource
-                0x080043c0       0x2c ./Core/Src/rtc.o
+                0x080043bc       0x2c ./Core/Src/rtc.o
  .text.LL_RCC_GetRTCClockSource
-                0x080043ec       0x18 ./Core/Src/rtc.o
+                0x080043e8       0x18 ./Core/Src/rtc.o
  .text.LL_RCC_EnableRTC
-                0x08004404       0x1c ./Core/Src/rtc.o
+                0x08004400       0x1c ./Core/Src/rtc.o
  .text.LL_RCC_ForceBackupDomainReset
-                0x08004420       0x1c ./Core/Src/rtc.o
+                0x0800441c       0x1c ./Core/Src/rtc.o
  .text.LL_RCC_ReleaseBackupDomainReset
-                0x0800443c       0x20 ./Core/Src/rtc.o
+                0x08004438       0x20 ./Core/Src/rtc.o
  .text.LL_APB1_GRP1_EnableClock
-                0x0800445c       0x2c ./Core/Src/rtc.o
+                0x08004458       0x2c ./Core/Src/rtc.o
  .text.MX_RTC_Init
-                0x08004488       0x6c ./Core/Src/rtc.o
-                0x08004488                MX_RTC_Init
+                0x08004484       0x6c ./Core/Src/rtc.o
+                0x08004484                MX_RTC_Init
  .text.NMI_Handler
-                0x080044f4        0x8 ./Core/Src/stm32g0xx_it.o
-                0x080044f4                NMI_Handler
+                0x080044f0        0x8 ./Core/Src/stm32g0xx_it.o
+                0x080044f0                NMI_Handler
  .text.HardFault_Handler
-                0x080044fc        0x8 ./Core/Src/stm32g0xx_it.o
-                0x080044fc                HardFault_Handler
+                0x080044f8        0x8 ./Core/Src/stm32g0xx_it.o
+                0x080044f8                HardFault_Handler
  .text.SVC_Handler
-                0x08004504        0xa ./Core/Src/stm32g0xx_it.o
-                0x08004504                SVC_Handler
+                0x08004500        0xa ./Core/Src/stm32g0xx_it.o
+                0x08004500                SVC_Handler
  .text.PendSV_Handler
-                0x0800450e        0xa ./Core/Src/stm32g0xx_it.o
-                0x0800450e                PendSV_Handler
+                0x0800450a        0xa ./Core/Src/stm32g0xx_it.o
+                0x0800450a                PendSV_Handler
  .text.SysTick_Handler
-                0x08004518        0xa ./Core/Src/stm32g0xx_it.o
-                0x08004518                SysTick_Handler
- *fill*         0x08004522        0x2 
+                0x08004514        0xa ./Core/Src/stm32g0xx_it.o
+                0x08004514                SysTick_Handler
+ *fill*         0x0800451e        0x2 
  .text.TIM1_BRK_UP_TRG_COM_IRQHandler
-                0x08004524       0xdc ./Core/Src/stm32g0xx_it.o
-                0x08004524                TIM1_BRK_UP_TRG_COM_IRQHandler
+                0x08004520       0xdc ./Core/Src/stm32g0xx_it.o
+                0x08004520                TIM1_BRK_UP_TRG_COM_IRQHandler
  .text.USART1_IRQHandler
-                0x08004600        0xa ./Core/Src/stm32g0xx_it.o
-                0x08004600                USART1_IRQHandler
+                0x080045fc        0xa ./Core/Src/stm32g0xx_it.o
+                0x080045fc                USART1_IRQHandler
  .text.USART2_IRQHandler
-                0x0800460a        0xe ./Core/Src/stm32g0xx_it.o
-                0x0800460a                USART2_IRQHandler
+                0x08004606        0xe ./Core/Src/stm32g0xx_it.o
+                0x08004606                USART2_IRQHandler
  .text.USART3_4_IRQHandler
-                0x08004618        0xa ./Core/Src/stm32g0xx_it.o
-                0x08004618                USART3_4_IRQHandler
+                0x08004614        0xa ./Core/Src/stm32g0xx_it.o
+                0x08004614                USART3_4_IRQHandler
  .text.SystemInit
-                0x08004622        0xa ./Core/Src/system_stm32g0xx.o
-                0x08004622                SystemInit
+                0x0800461e        0xa ./Core/Src/system_stm32g0xx.o
+                0x0800461e                SystemInit
  .text.__NVIC_EnableIRQ
-                0x0800462c       0x34 ./Core/Src/tim.o
+                0x08004628       0x34 ./Core/Src/tim.o
  .text.__NVIC_SetPriority
-                0x08004660       0xdc ./Core/Src/tim.o
+                0x0800465c       0xdc ./Core/Src/tim.o
  .text.LL_APB2_GRP1_EnableClock
-                0x0800473c       0x2c ./Core/Src/tim.o
+                0x08004738       0x2c ./Core/Src/tim.o
  .text.LL_TIM_DisableARRPreload
-                0x08004768       0x1e ./Core/Src/tim.o
- *fill*         0x08004786        0x2 
+                0x08004764       0x1e ./Core/Src/tim.o
+ *fill*         0x08004782        0x2 
  .text.LL_TIM_SetClockSource
-                0x08004788       0x28 ./Core/Src/tim.o
+                0x08004784       0x28 ./Core/Src/tim.o
  .text.LL_TIM_SetTriggerOutput
-                0x080047b0       0x24 ./Core/Src/tim.o
+                0x080047ac       0x24 ./Core/Src/tim.o
  .text.LL_TIM_SetTriggerOutput2
-                0x080047d4       0x28 ./Core/Src/tim.o
+                0x080047d0       0x28 ./Core/Src/tim.o
  .text.LL_TIM_DisableMasterSlaveMode
-                0x080047fc       0x1e ./Core/Src/tim.o
- *fill*         0x0800481a        0x2 
+                0x080047f8       0x1e ./Core/Src/tim.o
+ *fill*         0x08004816        0x2 
  .text.MX_TIM1_Init
-                0x0800481c       0x94 ./Core/Src/tim.o
-                0x0800481c                MX_TIM1_Init
+                0x08004818       0x94 ./Core/Src/tim.o
+                0x08004818                MX_TIM1_Init
  .text.__NVIC_EnableIRQ
-                0x080048b0       0x34 ./Core/Src/usart.o
+                0x080048ac       0x34 ./Core/Src/usart.o
  .text.__NVIC_SetPriority
-                0x080048e4       0xdc ./Core/Src/usart.o
+                0x080048e0       0xdc ./Core/Src/usart.o
  .text.LL_RCC_SetUSARTClockSource
-                0x080049c0       0x30 ./Core/Src/usart.o
+                0x080049bc       0x30 ./Core/Src/usart.o
  .text.LL_APB1_GRP1_EnableClock
-                0x080049f0       0x2c ./Core/Src/usart.o
+                0x080049ec       0x2c ./Core/Src/usart.o
  .text.LL_APB2_GRP1_EnableClock
-                0x08004a1c       0x2c ./Core/Src/usart.o
+                0x08004a18       0x2c ./Core/Src/usart.o
  .text.LL_IOP_GRP1_EnableClock
-                0x08004a48       0x2c ./Core/Src/usart.o
+                0x08004a44       0x2c ./Core/Src/usart.o
  .text.LL_USART_Enable
-                0x08004a74       0x1c ./Core/Src/usart.o
+                0x08004a70       0x1c ./Core/Src/usart.o
  .text.LL_USART_DisableFIFO
-                0x08004a90       0x20 ./Core/Src/usart.o
+                0x08004a8c       0x20 ./Core/Src/usart.o
  .text.LL_USART_SetTXFIFOThreshold
-                0x08004ab0       0x46 ./Core/Src/usart.o
- *fill*         0x08004af6        0x2 
+                0x08004aac       0x46 ./Core/Src/usart.o
+ *fill*         0x08004af2        0x2 
  .text.LL_USART_SetRXFIFOThreshold
-                0x08004af8       0x4c ./Core/Src/usart.o
+                0x08004af4       0x4c ./Core/Src/usart.o
  .text.LL_USART_ConfigAsyncMode
-                0x08004b44       0x30 ./Core/Src/usart.o
+                0x08004b40       0x30 ./Core/Src/usart.o
  .text.LL_USART_IsActiveFlag_TEACK
-                0x08004b74       0x28 ./Core/Src/usart.o
+                0x08004b70       0x28 ./Core/Src/usart.o
  .text.LL_USART_IsActiveFlag_REACK
-                0x08004b9c       0x28 ./Core/Src/usart.o
+                0x08004b98       0x28 ./Core/Src/usart.o
  .text.MX_USART1_UART_Init
-                0x08004bc4      0x148 ./Core/Src/usart.o
-                0x08004bc4                MX_USART1_UART_Init
+                0x08004bc0      0x148 ./Core/Src/usart.o
+                0x08004bc0                MX_USART1_UART_Init
  .text.MX_USART2_UART_Init
-                0x08004d0c      0x144 ./Core/Src/usart.o
-                0x08004d0c                MX_USART2_UART_Init
+                0x08004d08      0x144 ./Core/Src/usart.o
+                0x08004d08                MX_USART2_UART_Init
  .text.MX_USART3_UART_Init
-                0x08004e50      0x128 ./Core/Src/usart.o
-                0x08004e50                MX_USART3_UART_Init
+                0x08004e4c      0x128 ./Core/Src/usart.o
+                0x08004e4c                MX_USART3_UART_Init
  .text.MX_USART4_UART_Init
-                0x08004f78      0x120 ./Core/Src/usart.o
-                0x08004f78                MX_USART4_UART_Init
+                0x08004f74      0x120 ./Core/Src/usart.o
+                0x08004f74                MX_USART4_UART_Init
  .text.LL_I2C_SetMasterAddressingMode
-                0x08005098       0x28 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x08005094       0x28 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
  .text.LL_I2C_IsActiveFlag_TXE
-                0x080050c0       0x22 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x080050bc       0x22 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
  .text.LL_I2C_IsActiveFlag_TXIS
-                0x080050e2       0x22 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x080050de       0x22 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
  .text.LL_I2C_IsActiveFlag_RXNE
-                0x08005104       0x22 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
- *fill*         0x08005126        0x2 
+                0x08005100       0x22 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+ *fill*         0x08005122        0x2 
  .text.LL_I2C_DisableAutoEndMode
-                0x08005128       0x20 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x08005124       0x20 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
  .text.LL_I2C_SetTransferSize
-                0x08005148       0x28 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x08005144       0x28 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
  .text.LL_I2C_GenerateStopCondition
-                0x08005170       0x1e ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x0800516c       0x1e ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
  .text.LL_I2C_SetSlaveAddr
-                0x0800518e       0x22 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x0800518a       0x22 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
  .text.LL_I2C_ReceiveData8
-                0x080051b0       0x16 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x080051ac       0x16 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
  .text.LL_I2C_TransmitData8
-                0x080051c6       0x1e ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x080051c2       0x1e ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
  .text.LL_RTC_ALMA_ConfigTime
-                0x080051e4       0x4c ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x080051e0       0x4c ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
  .text.RTC_Drv_Init
-                0x08005230       0x54 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
-                0x08005230                RTC_Drv_Init
+                0x0800522c       0x54 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x0800522c                RTC_Drv_Init
  .text.RTC_Drv_Get_Ext_Date_Time
-                0x08005284      0x2a4 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
-                0x08005284                RTC_Drv_Get_Ext_Date_Time
+                0x08005280      0x2a4 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x08005280                RTC_Drv_Get_Ext_Date_Time
  .text.RTC_Drv_Set_Ext_Date_Time
-                0x08005528      0x118 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
-                0x08005528                RTC_Drv_Set_Ext_Date_Time
+                0x08005524      0x118 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x08005524                RTC_Drv_Set_Ext_Date_Time
  .text.RTC_Drv_Ext_Write_Byte
-                0x08005640      0x150 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
-                0x08005640                RTC_Drv_Ext_Write_Byte
+                0x0800563c      0x150 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x0800563c                RTC_Drv_Ext_Write_Byte
  .text.RTC_Drv_Intrnl_Alarm_Init
-                0x08005790       0x50 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
-                0x08005790                RTC_Drv_Intrnl_Alarm_Init
+                0x0800578c       0x50 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+                0x0800578c                RTC_Drv_Intrnl_Alarm_Init
  .text.Switch_1ms_Interrupt_Fn
-                0x080057e0       0xd4 ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
-                0x080057e0                Switch_1ms_Interrupt_Fn
+                0x080057dc       0xd4 ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
+                0x080057dc                Switch_1ms_Interrupt_Fn
  .text.Switch_Incrmnt_Detect
-                0x080058b4       0x74 ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
-                0x080058b4                Switch_Incrmnt_Detect
+                0x080058b0       0x74 ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
+                0x080058b0                Switch_Incrmnt_Detect
  .text.Switch_Decrmnt_Detect
-                0x08005928       0x64 ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
-                0x08005928                Switch_Decrmnt_Detect
+                0x08005924       0x64 ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
+                0x08005924                Switch_Decrmnt_Detect
  .text.Switch_Set_Detect
-                0x0800598c       0xac ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
-                0x0800598c                Switch_Set_Detect
+                0x08005988       0xac ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
+                0x08005988                Switch_Set_Detect
  .text.Switch_Enter_Detect
-                0x08005a38       0xa8 ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
-                0x08005a38                Switch_Enter_Detect
+                0x08005a34       0xa8 ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
+                0x08005a34                Switch_Enter_Detect
  .text.Switch_Set_and_Enter_Detect
-                0x08005ae0       0x7c ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
-                0x08005ae0                Switch_Set_and_Enter_Detect
+                0x08005adc       0x7c ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
+                0x08005adc                Switch_Set_and_Enter_Detect
  .text.Whileloop_Metering_Data_Rq_Fn
-                0x08005b5c      0x104 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
-                0x08005b5c                Whileloop_Metering_Data_Rq_Fn
+                0x08005b58      0x104 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+                0x08005b58                Whileloop_Metering_Data_Rq_Fn
  .text.U1Mast_App_Populate_And_Send_Txdata_Array_With_Message_Request_Metering
-                0x08005c60       0x50 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
-                0x08005c60                U1Mast_App_Populate_And_Send_Txdata_Array_With_Message_Request_Metering
+                0x08005c5c       0x50 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+                0x08005c5c                U1Mast_App_Populate_And_Send_Txdata_Array_With_Message_Request_Metering
  .text.Whileloop_Setting_Send_Data_Fn
-                0x08005cb0      0x104 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
-                0x08005cb0                Whileloop_Setting_Send_Data_Fn
+                0x08005cac      0x104 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+                0x08005cac                Whileloop_Setting_Send_Data_Fn
  .text.Display_to_Inverter
-                0x08005db4      0x2c4 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
-                0x08005db4                Display_to_Inverter
+                0x08005db0      0x2c4 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+                0x08005db0                Display_to_Inverter
  .text.U1Mast_App_Populate_And_Send_Txdata_Array_With_Zeros_Calib
-                0x08006078       0x9c ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
-                0x08006078                U1Mast_App_Populate_And_Send_Txdata_Array_With_Zeros_Calib
+                0x08006074       0x9c ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+                0x08006074                U1Mast_App_Populate_And_Send_Txdata_Array_With_Zeros_Calib
  .text.U1Mast_App_Populate_And_Send_Txdata_Array_With_Msg_Calib
-                0x08006114      0x168 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
-                0x08006114                U1Mast_App_Populate_And_Send_Txdata_Array_With_Msg_Calib
+                0x08006110      0x15c ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+                0x08006110                U1Mast_App_Populate_And_Send_Txdata_Array_With_Msg_Calib
  .text.U1Mast_App_Populate_And_Send_Txdata_Array_With_Msg_RESET
-                0x0800627c       0x94 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
-                0x0800627c                U1Mast_App_Populate_And_Send_Txdata_Array_With_Msg_RESET
+                0x0800626c       0x94 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+                0x0800626c                U1Mast_App_Populate_And_Send_Txdata_Array_With_Msg_RESET
  .text.U1Mast_App_Store_Received_Data_In_Variables
-                0x08006310       0x1a ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
-                0x08006310                U1Mast_App_Store_Received_Data_In_Variables
- *fill*         0x0800632a        0x2 
+                0x08006300       0x1a ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+                0x08006300                U1Mast_App_Store_Received_Data_In_Variables
+ *fill*         0x0800631a        0x2 
  .text.U1Mast_App_Update_Variables_if_Mesage_is_m
-                0x0800632c       0x84 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
-                0x0800632c                U1Mast_App_Update_Variables_if_Mesage_is_m
+                0x0800631c       0x84 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+                0x0800631c                U1Mast_App_Update_Variables_if_Mesage_is_m
  .text.U1Mast_App_Update_Variables_if_Mesage_is_S
-                0x080063b0       0x5c ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
-                0x080063b0                U1Mast_App_Update_Variables_if_Mesage_is_S
+                0x080063a0       0x5c ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+                0x080063a0                U1Mast_App_Update_Variables_if_Mesage_is_S
  .text.U1Mast_App_Update_Variables_if_Mesage_is_c
-                0x0800640c       0x8c ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
-                0x0800640c                U1Mast_App_Update_Variables_if_Mesage_is_c
+                0x080063fc       0x8c ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+                0x080063fc                U1Mast_App_Update_Variables_if_Mesage_is_c
  .text.U1Mast_App_Update_Variables_if_Mesage_is_r
-                0x08006498       0x50 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
-                0x08006498                U1Mast_App_Update_Variables_if_Mesage_is_r
+                0x08006488       0x50 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+                0x08006488                U1Mast_App_Update_Variables_if_Mesage_is_r
  .text.U1Mast_App_Use_Received_Data_m
-                0x080064e8       0xd8 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
-                0x080064e8                U1Mast_App_Use_Received_Data_m
+                0x080064d8       0xd8 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+                0x080064d8                U1Mast_App_Use_Received_Data_m
  .text.U1Mast_App_Use_Received_Data_c
-                0x080065c0       0x70 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
-                0x080065c0                U1Mast_App_Use_Received_Data_c
+                0x080065b0       0x70 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+                0x080065b0                U1Mast_App_Use_Received_Data_c
  .text.U1Mast_Drv_crcFast
-                0x08006630       0x5c ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.o
-                0x08006630                U1Mast_Drv_crcFast
+                0x08006620       0x5c ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.o
+                0x08006620                U1Mast_Drv_crcFast
  .text.U1Mast_Drv_Receive_ISR_Program
-                0x0800668c      0x2f8 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.o
-                0x0800668c                U1Mast_Drv_Receive_ISR_Program
+                0x0800667c      0x2f8 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.o
+                0x0800667c                U1Mast_Drv_Receive_ISR_Program
  .text.U1Mast_Drv_Send_Function_Inside_Timer_Interrupt
-                0x08006984       0x70 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.o
-                0x08006984                U1Mast_Drv_Send_Function_Inside_Timer_Interrupt
+                0x08006974       0x70 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.o
+                0x08006974                U1Mast_Drv_Send_Function_Inside_Timer_Interrupt
  .text.Reset_Handler
-                0x080069f4       0x50 ./Core/Startup/startup_stm32g070cbtx.o
-                0x080069f4                Reset_Handler
+                0x080069e4       0x50 ./Core/Startup/startup_stm32g070cbtx.o
+                0x080069e4                Reset_Handler
  .text.Default_Handler
-                0x08006a44        0x2 ./Core/Startup/startup_stm32g070cbtx.o
-                0x08006a44                TIM1_CC_IRQHandler
-                0x08006a44                TIM6_IRQHandler
-                0x08006a44                I2C1_IRQHandler
-                0x08006a44                RTC_TAMP_IRQHandler
-                0x08006a44                SPI1_IRQHandler
-                0x08006a44                EXTI2_3_IRQHandler
-                0x08006a44                ADC1_IRQHandler
-                0x08006a44                I2C2_IRQHandler
-                0x08006a44                TIM17_IRQHandler
-                0x08006a44                TIM16_IRQHandler
-                0x08006a44                TIM3_IRQHandler
-                0x08006a44                EXTI4_15_IRQHandler
-                0x08006a44                RCC_IRQHandler
-                0x08006a44                DMA1_Channel1_IRQHandler
-                0x08006a44                Default_Handler
-                0x08006a44                TIM14_IRQHandler
-                0x08006a44                TIM7_IRQHandler
-                0x08006a44                TIM15_IRQHandler
-                0x08006a44                EXTI0_1_IRQHandler
-                0x08006a44                SPI2_IRQHandler
-                0x08006a44                WWDG_IRQHandler
-                0x08006a44                DMA1_Ch4_7_DMAMUX1_OVR_IRQHandler
-                0x08006a44                DMA1_Channel2_3_IRQHandler
-                0x08006a44                FLASH_IRQHandler
+                0x08006a34        0x2 ./Core/Startup/startup_stm32g070cbtx.o
+                0x08006a34                TIM1_CC_IRQHandler
+                0x08006a34                TIM6_IRQHandler
+                0x08006a34                I2C1_IRQHandler
+                0x08006a34                RTC_TAMP_IRQHandler
+                0x08006a34                SPI1_IRQHandler
+                0x08006a34                EXTI2_3_IRQHandler
+                0x08006a34                ADC1_IRQHandler
+                0x08006a34                I2C2_IRQHandler
+                0x08006a34                TIM17_IRQHandler
+                0x08006a34                TIM16_IRQHandler
+                0x08006a34                TIM3_IRQHandler
+                0x08006a34                EXTI4_15_IRQHandler
+                0x08006a34                RCC_IRQHandler
+                0x08006a34                DMA1_Channel1_IRQHandler
+                0x08006a34                Default_Handler
+                0x08006a34                TIM14_IRQHandler
+                0x08006a34                TIM7_IRQHandler
+                0x08006a34                TIM15_IRQHandler
+                0x08006a34                EXTI0_1_IRQHandler
+                0x08006a34                SPI2_IRQHandler
+                0x08006a34                WWDG_IRQHandler
+                0x08006a34                DMA1_Ch4_7_DMAMUX1_OVR_IRQHandler
+                0x08006a34                DMA1_Channel2_3_IRQHandler
+                0x08006a34                FLASH_IRQHandler
  .text.LL_GPIO_SetPinMode
-                0x08006a46       0x38 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
+                0x08006a36       0x38 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
  .text.LL_GPIO_SetPinOutputType
-                0x08006a7e       0x2a ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
+                0x08006a6e       0x2a ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
  .text.LL_GPIO_SetPinSpeed
-                0x08006aa8       0x38 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
+                0x08006a98       0x38 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
  .text.LL_GPIO_SetPinPull
-                0x08006ae0       0x38 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
+                0x08006ad0       0x38 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
  .text.LL_GPIO_SetAFPin_0_7
-                0x08006b18       0x46 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
+                0x08006b08       0x46 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
  .text.LL_GPIO_SetAFPin_8_15
-                0x08006b5e       0x5a ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
+                0x08006b4e       0x5a ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
  .text.LL_GPIO_Init
-                0x08006bb8       0xb6 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
-                0x08006bb8                LL_GPIO_Init
+                0x08006ba8       0xb6 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
+                0x08006ba8                LL_GPIO_Init
  .text.LL_I2C_Enable
-                0x08006c6e       0x1c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
+                0x08006c5e       0x1c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
  .text.LL_I2C_Disable
-                0x08006c8a       0x1e ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
+                0x08006c7a       0x1e ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
  .text.LL_I2C_ConfigFilters
-                0x08006ca8       0x30 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
+                0x08006c98       0x30 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
  .text.LL_I2C_SetOwnAddress1
-                0x08006cd8       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
+                0x08006cc8       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
  .text.LL_I2C_EnableOwnAddress1
-                0x08006d00       0x1e ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
- *fill*         0x08006d1e        0x2 
+                0x08006cf0       0x1e ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
+ *fill*         0x08006d0e        0x2 
  .text.LL_I2C_DisableOwnAddress1
-                0x08006d20       0x20 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
+                0x08006d10       0x20 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
  .text.LL_I2C_SetTiming
-                0x08006d40       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
+                0x08006d30       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
  .text.LL_I2C_SetMode
-                0x08006d58       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
+                0x08006d48       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
  .text.LL_I2C_AcknowledgeNextData
-                0x08006d80       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
+                0x08006d70       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
  .text.LL_I2C_Init
-                0x08006da8       0x86 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
-                0x08006da8                LL_I2C_Init
- *fill*         0x08006e2e        0x2 
+                0x08006d98       0x86 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
+                0x08006d98                LL_I2C_Init
+ *fill*         0x08006e1e        0x2 
  .text.LL_RCC_HSI_IsReady
-                0x08006e30       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x08006e20       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
  .text.LL_RCC_LSE_IsReady
-                0x08006e58       0x20 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x08006e48       0x20 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
  .text.LL_RCC_GetSysClkSource
-                0x08006e78       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x08006e68       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
  .text.LL_RCC_GetAHBPrescaler
-                0x08006e90       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x08006e80       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
  .text.LL_RCC_GetAPB1Prescaler
-                0x08006ea8       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x08006e98       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
  .text.LL_RCC_GetUSARTClockSource
-                0x08006ec0       0x24 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x08006eb0       0x24 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
  .text.LL_RCC_PLL_GetN
-                0x08006ee4       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x08006ed4       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
  .text.LL_RCC_PLL_GetR
-                0x08006efc       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x08006eec       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
  .text.LL_RCC_PLL_GetMainSource
-                0x08006f14       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x08006f04       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
  .text.LL_RCC_PLL_GetDivider
-                0x08006f2c       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x08006f1c       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
  .text.LL_RCC_GetSystemClocksFreq
-                0x08006f44       0x3a ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
-                0x08006f44                LL_RCC_GetSystemClocksFreq
- *fill*         0x08006f7e        0x2 
+                0x08006f34       0x3a ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x08006f34                LL_RCC_GetSystemClocksFreq
+ *fill*         0x08006f6e        0x2 
  .text.LL_RCC_GetUSARTClockFreq
-                0x08006f80      0x120 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
-                0x08006f80                LL_RCC_GetUSARTClockFreq
+                0x08006f70      0x120 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x08006f70                LL_RCC_GetUSARTClockFreq
  .text.RCC_GetSystemClockFreq
-                0x080070a0       0x5c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x08007090       0x5c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
  .text.RCC_GetHCLKClockFreq
-                0x080070fc       0x30 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x080070ec       0x30 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
  .text.RCC_GetPCLK1ClockFreq
-                0x0800712c       0x2c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x0800711c       0x2c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
  .text.RCC_PLL_GetFreqDomain_SYS
-                0x08007158       0x74 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+                0x08007148       0x74 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
  .text.LL_RTC_SetHourFormat
-                0x080071cc       0x24 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
+                0x080071bc       0x24 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
  .text.LL_RTC_EnableInitMode
-                0x080071f0       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
+                0x080071e0       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
  .text.LL_RTC_DisableInitMode
-                0x08007208       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
+                0x080071f8       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
  .text.LL_RTC_SetAsynchPrescaler
-                0x08007220       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
+                0x08007210       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
  .text.LL_RTC_SetSynchPrescaler
-                0x08007248       0x22 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
+                0x08007238       0x22 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
  .text.LL_RTC_EnableWriteProtection
-                0x0800726a       0x16 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
+                0x0800725a       0x16 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
  .text.LL_RTC_DisableWriteProtection
-                0x08007280       0x1c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
+                0x08007270       0x1c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
  .text.LL_RTC_IsActiveFlag_INIT
-                0x0800729c       0x22 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
- *fill*         0x080072be        0x2 
+                0x0800728c       0x22 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
+ *fill*         0x080072ae        0x2 
  .text.LL_SYSTICK_IsActiveCounterFlag
-                0x080072c0       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
+                0x080072b0       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
  .text.LL_RTC_Init
-                0x080072e8       0x76 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
-                0x080072e8                LL_RTC_Init
+                0x080072d8       0x76 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
+                0x080072d8                LL_RTC_Init
  .text.LL_RTC_EnterInitMode
-                0x0800735e       0x7c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
-                0x0800735e                LL_RTC_EnterInitMode
+                0x0800734e       0x7c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
+                0x0800734e                LL_RTC_EnterInitMode
  .text.LL_TIM_SetPrescaler
-                0x080073da       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.o
+                0x080073ca       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.o
  .text.LL_TIM_SetAutoReload
-                0x080073f2       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.o
+                0x080073e2       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.o
  .text.LL_TIM_SetRepetitionCounter
-                0x0800740a       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.o
+                0x080073fa       0x18 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.o
  .text.LL_TIM_GenerateEvent_UPDATE
-                0x08007422       0x1c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.o
- *fill*         0x0800743e        0x2 
+                0x08007412       0x1c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.o
+ *fill*         0x0800742e        0x2 
  .text.LL_TIM_Init
-                0x08007440       0xf0 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.o
-                0x08007440                LL_TIM_Init
+                0x08007430       0xf0 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.o
+                0x08007430                LL_TIM_Init
  .text.LL_USART_IsEnabled
-                0x08007530       0x22 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
+                0x08007520       0x22 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
  .text.LL_USART_SetPrescaler
-                0x08007552       0x24 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
- *fill*         0x08007576        0x2 
+                0x08007542       0x24 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
+ *fill*         0x08007566        0x2 
  .text.LL_USART_SetStopBitsLength
-                0x08007578       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
+                0x08007568       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
  .text.LL_USART_SetHWFlowCtrl
-                0x080075a0       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
+                0x08007590       0x28 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
  .text.LL_USART_SetBaudRate
-                0x080075c8       0xb4 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
+                0x080075b8       0xb4 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
  .text.LL_USART_Init
-                0x0800767c      0x11c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
-                0x0800767c                LL_USART_Init
+                0x0800766c      0x11c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
+                0x0800766c                LL_USART_Init
  .text.LL_InitTick
-                0x08007798       0x34 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.o
+                0x08007788       0x34 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.o
  .text.LL_Init1msTick
-                0x080077cc       0x1e ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.o
-                0x080077cc                LL_Init1msTick
- *fill*         0x080077ea        0x2 
+                0x080077bc       0x1e ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.o
+                0x080077bc                LL_Init1msTick
+ *fill*         0x080077da        0x2 
  .text.LL_SetSystemCoreClock
-                0x080077ec       0x1c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.o
-                0x080077ec                LL_SetSystemCoreClock
- .text.memset   0x08007808       0x10 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(libc_a-memset.o)
-                0x08007808                memset
+                0x080077dc       0x1c ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.o
+                0x080077dc                LL_SetSystemCoreClock
+ .text.memset   0x080077f8       0x10 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(libc_a-memset.o)
+                0x080077f8                memset
  .text.__libc_init_array
-                0x08007818       0x48 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(libc_a-init.o)
-                0x08007818                __libc_init_array
+                0x08007808       0x48 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(libc_a-init.o)
+                0x08007808                __libc_init_array
  *(.glue_7)
- .glue_7        0x08007860        0x0 linker stubs
+ .glue_7        0x08007850        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08007860        0x0 linker stubs
+ .glue_7t       0x08007850        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08007860        0x0 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+ .eh_frame      0x08007850        0x0 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
  *(.init)
- .init          0x08007860        0x4 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
-                0x08007860                _init
- .init          0x08007864        0x8 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
+ .init          0x08007850        0x4 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
+                0x08007850                _init
+ .init          0x08007854        0x8 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x0800786c        0x4 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
-                0x0800786c                _fini
- .fini          0x08007870        0x8 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
-                0x08007878                        . = ALIGN (0x4)
-                0x08007878                        _etext = .
+ .fini          0x0800785c        0x4 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
+                0x0800785c                _fini
+ .fini          0x08007860        0x8 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
+                0x08007868                        . = ALIGN (0x4)
+                0x08007868                        _etext = .
 
-.vfp11_veneer   0x08007878        0x0
- .vfp11_veneer  0x08007878        0x0 linker stubs
+.vfp11_veneer   0x08007868        0x0
+ .vfp11_veneer  0x08007868        0x0 linker stubs
 
-.v4_bx          0x08007878        0x0
- .v4_bx         0x08007878        0x0 linker stubs
+.v4_bx          0x08007868        0x0
+ .v4_bx         0x08007868        0x0 linker stubs
 
-.iplt           0x08007878        0x0
- .iplt          0x08007878        0x0 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x08007868        0x0
+ .iplt          0x08007868        0x0 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x08007878      0xabc
-                0x08007878                        . = ALIGN (0x4)
+.rodata         0x08007868      0xabc
+                0x08007868                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08007878       0xbb ./Core/Src/Display_Application_Lib/Display_App_Functions.o
- *fill*         0x08007933        0x1 
- .rodata        0x08007934       0xf3 ./Core/Src/Main_Functions.o
- *fill*         0x08007a27        0x1 
- .rodata        0x08007a28       0x7c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libgcc.a(divsf3.o)
+ .rodata        0x08007868       0xbb ./Core/Src/Display_Application_Lib/Display_App_Functions.o
+ *fill*         0x08007923        0x1 
+ .rodata        0x08007924       0xf3 ./Core/Src/Main_Functions.o
+ *fill*         0x08007a17        0x1 
+ .rodata        0x08007a18       0x7c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libgcc.a(divsf3.o)
  *(.rodata*)
  .rodata.Disp_Metering_Name
-                0x08007aa4       0xdc ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x08007aa4                Disp_Metering_Name
+                0x08007a94       0xdc ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x08007a94                Disp_Metering_Name
  .rodata.Disp_Option_Name
-                0x08007b80       0x64 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x08007b80                Disp_Option_Name
+                0x08007b70       0x64 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x08007b70                Disp_Option_Name
  .rodata.Disp_Password_Name
-                0x08007be4        0xa ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x08007be4                Disp_Password_Name
- *fill*         0x08007bee        0x2 
+                0x08007bd4        0xa ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x08007bd4                Disp_Password_Name
+ *fill*         0x08007bde        0x2 
  .rodata.Disp_Metrng_Calib_Name
-                0x08007bf0       0x78 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x08007bf0                Disp_Metrng_Calib_Name
+                0x08007be0       0x78 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x08007be0                Disp_Metrng_Calib_Name
  .rodata.Disp_Desired_Metrng_Calib_Name
-                0x08007c68       0xb4 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x08007c68                Disp_Desired_Metrng_Calib_Name
+                0x08007c58       0xb4 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x08007c58                Disp_Desired_Metrng_Calib_Name
  .rodata.Disp_Setting_Name
-                0x08007d1c      0x334 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x08007d1c                Disp_Setting_Name
+                0x08007d0c      0x334 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x08007d0c                Disp_Setting_Name
  .rodata.Disp_Calib_Value_Scaler
-                0x08008050       0x30 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x08008050                Disp_Calib_Value_Scaler
+                0x08008040       0x30 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x08008040                Disp_Calib_Value_Scaler
  .rodata.Disp_Setting_Value_Scaler
-                0x08008080       0xa4 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x08008080                Disp_Setting_Value_Scaler
+                0x08008070       0xa4 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x08008070                Disp_Setting_Value_Scaler
  .rodata.Disp_RTC_Name
-                0x08008124       0x3c ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x08008124                Disp_RTC_Name
+                0x08008114       0x3c ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x08008114                Disp_RTC_Name
  .rodata.Whileloop_State_Fn
-                0x08008160       0x44 ./Core/Src/Main_Functions.o
+                0x08008150       0x44 ./Core/Src/Main_Functions.o
  .rodata.AHBPrescTable
-                0x080081a4       0x40 ./Core/Src/system_stm32g0xx.o
-                0x080081a4                AHBPrescTable
+                0x08008194       0x40 ./Core/Src/system_stm32g0xx.o
+                0x08008194                AHBPrescTable
  .rodata.APBPrescTable
-                0x080081e4       0x20 ./Core/Src/system_stm32g0xx.o
-                0x080081e4                APBPrescTable
+                0x080081d4       0x20 ./Core/Src/system_stm32g0xx.o
+                0x080081d4                APBPrescTable
  .rodata.UART1_crcTable
-                0x08008204      0x100 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
-                0x08008204                UART1_crcTable
+                0x080081f4      0x100 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
+                0x080081f4                UART1_crcTable
  .rodata.USART_PRESCALER_TAB
-                0x08008304       0x30 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
-                0x08008334                        . = ALIGN (0x4)
+                0x080082f4       0x30 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
+                0x08008324                        . = ALIGN (0x4)
 
-.ARM.extab      0x08008334        0x0
-                0x08008334                        . = ALIGN (0x4)
+.ARM.extab      0x08008324        0x0
+                0x08008324                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08008334                        . = ALIGN (0x4)
+                0x08008324                        . = ALIGN (0x4)
 
-.ARM            0x08008334        0x0
-                0x08008334                        . = ALIGN (0x4)
-                0x08008334                        __exidx_start = .
+.ARM            0x08008324        0x0
+                0x08008324                        . = ALIGN (0x4)
+                0x08008324                        __exidx_start = .
  *(.ARM.exidx*)
-                0x08008334                        __exidx_end = .
-                0x08008334                        . = ALIGN (0x4)
+                0x08008324                        __exidx_end = .
+                0x08008324                        . = ALIGN (0x4)
 
-.preinit_array  0x08008334        0x0
-                0x08008334                        . = ALIGN (0x4)
-                0x08008334                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08008324        0x0
+                0x08008324                        . = ALIGN (0x4)
+                0x08008324                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08008334                        PROVIDE (__preinit_array_end = .)
-                0x08008334                        . = ALIGN (0x4)
+                0x08008324                        PROVIDE (__preinit_array_end = .)
+                0x08008324                        . = ALIGN (0x4)
 
-.init_array     0x08008334        0x4
-                0x08008334                        . = ALIGN (0x4)
-                0x08008334                        PROVIDE (__init_array_start = .)
+.init_array     0x08008324        0x4
+                0x08008324                        . = ALIGN (0x4)
+                0x08008324                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08008334        0x4 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x08008338                        PROVIDE (__init_array_end = .)
-                0x08008338                        . = ALIGN (0x4)
+ .init_array    0x08008324        0x4 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x08008328                        PROVIDE (__init_array_end = .)
+                0x08008328                        . = ALIGN (0x4)
 
-.fini_array     0x08008338        0x4
-                0x08008338                        . = ALIGN (0x4)
+.fini_array     0x08008328        0x4
+                0x08008328                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08008338        0x4 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+ .fini_array    0x08008328        0x4 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0800833c                        . = ALIGN (0x4)
-                0x0800833c                        _sidata = LOADADDR (.data)
+                0x0800832c                        . = ALIGN (0x4)
+                0x0800832c                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x0800833c        0x0
- .rel.iplt      0x0800833c        0x0 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x0800832c        0x0
+ .rel.iplt      0x0800832c        0x0 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.data           0x20000000      0x2a4 load address 0x0800833c
+.data           0x20000000      0x28c load address 0x0800832c
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -4377,212 +4379,209 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .data.Calib_Value
                 0x20000030       0x18 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
                 0x20000030                Calib_Value
- .data.Calib_Value_Updated
-                0x20000048       0x18 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x20000048                Calib_Value_Updated
  .data.Disp_Setting_Value
-                0x20000060       0x52 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x20000060                Disp_Setting_Value
- *fill*         0x200000b2        0x2 
+                0x20000048       0x52 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x20000048                Disp_Setting_Value
+ *fill*         0x2000009a        0x2 
  .data.Disp_New_Setting_Value
-                0x200000b4       0x52 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x200000b4                Disp_New_Setting_Value
- *fill*         0x20000106        0x2 
+                0x2000009c       0x52 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x2000009c                Disp_New_Setting_Value
+ *fill*         0x200000ee        0x2 
  .data.EEPROM_Write_Array
-                0x20000108      0x12c ./Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Variables.o
-                0x20000108                EEPROM_Write_Array
- .data.__cgram  0x20000234       0x40 ./Core/Src/LCD16X2_Driver_Lib/LCD16X2_Driver_Variables.o
-                0x20000234                __cgram
+                0x200000f0      0x12c ./Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Variables.o
+                0x200000f0                EEPROM_Write_Array
+ .data.__cgram  0x2000021c       0x40 ./Core/Src/LCD16X2_Driver_Lib/LCD16X2_Driver_Variables.o
+                0x2000021c                __cgram
  .data.SystemCoreClock
-                0x20000274        0x4 ./Core/Src/system_stm32g0xx.o
-                0x20000274                SystemCoreClock
+                0x2000025c        0x4 ./Core/Src/system_stm32g0xx.o
+                0x2000025c                SystemCoreClock
  .data.V_INV_Ref
-                0x20000278        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x20000278                V_INV_Ref
+                0x20000260        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000260                V_INV_Ref
  .data.V_INV_UL
-                0x2000027a        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x2000027a                V_INV_UL
+                0x20000262        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000262                V_INV_UL
  .data.V_INV_LL
-                0x2000027c        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x2000027c                V_INV_LL
+                0x20000264        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000264                V_INV_LL
  .data.V_Batt_H_Cutoff
-                0x2000027e        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x2000027e                V_Batt_H_Cutoff
+                0x20000266        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000266                V_Batt_H_Cutoff
  .data.V_Batt_H_Cutin
-                0x20000280        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x20000280                V_Batt_H_Cutin
+                0x20000268        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000268                V_Batt_H_Cutin
  .data.V_Batt_L_Cutoff
-                0x20000282        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x20000282                V_Batt_L_Cutoff
+                0x2000026a        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x2000026a                V_Batt_L_Cutoff
  .data.I_Inv_Full_Load
-                0x20000284        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x20000284                I_Inv_Full_Load
+                0x2000026c        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x2000026c                I_Inv_Full_Load
  .data.Relay_Off_Time
-                0x20000286        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x20000286                Relay_Off_Time
+                0x2000026e        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x2000026e                Relay_Off_Time
  .data.Relay_On_Time
-                0x20000288        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x20000288                Relay_On_Time
+                0x20000270        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000270                Relay_On_Time
  .data.I_grid_Export_Limit
-                0x2000028a        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x2000028a                I_grid_Export_Limit
+                0x20000272        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000272                I_grid_Export_Limit
  .data.I_grid_Import_Limit
-                0x2000028c        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x2000028c                I_grid_Import_Limit
+                0x20000274        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000274                I_grid_Import_Limit
  .data.PV_H_Cutoff
-                0x2000028e        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x2000028e                PV_H_Cutoff
+                0x20000276        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000276                PV_H_Cutoff
  .data.PV_H_Cutin
-                0x20000290        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x20000290                PV_H_Cutin
+                0x20000278        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000278                PV_H_Cutin
  .data.PV_L_Cutin
-                0x20000292        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x20000292                PV_L_Cutin
+                0x2000027a        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x2000027a                PV_L_Cutin
  .data.PV_L_Cutoff
-                0x20000294        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x20000294                PV_L_Cutoff
- .data.I_PV_UL  0x20000296        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x20000296                I_PV_UL
+                0x2000027c        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x2000027c                PV_L_Cutoff
+ .data.I_PV_UL  0x2000027e        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x2000027e                I_PV_UL
  .data.V_Mains_H_Cutoff
-                0x20000298        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x20000298                V_Mains_H_Cutoff
+                0x20000280        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000280                V_Mains_H_Cutoff
  .data.V_Mains_H_Cutin
-                0x2000029a        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x2000029a                V_Mains_H_Cutin
+                0x20000282        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000282                V_Mains_H_Cutin
  .data.V_Mains_L_Cutoff
-                0x2000029c        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x2000029c                V_Mains_L_Cutoff
+                0x20000284        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000284                V_Mains_L_Cutoff
  .data.V_Mains_L_Cutin
-                0x2000029e        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x2000029e                V_Mains_L_Cutin
+                0x20000286        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000286                V_Mains_L_Cutin
  .data.PV_Power_Limit
-                0x200002a0        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x200002a0                PV_Power_Limit
+                0x20000288        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000288                PV_Power_Limit
  *(.RamFunc)
  *(.RamFunc*)
-                0x200002a4                        . = ALIGN (0x4)
- *fill*         0x200002a2        0x2 
-                0x200002a4                        _edata = .
+                0x2000028c                        . = ALIGN (0x4)
+ *fill*         0x2000028a        0x2 
+                0x2000028c                        _edata = .
 
-.igot.plt       0x200002a4        0x0 load address 0x080085e0
- .igot.plt      0x200002a4        0x0 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x200002a4                        . = ALIGN (0x4)
+.igot.plt       0x2000028c        0x0 load address 0x080085b8
+ .igot.plt      0x2000028c        0x0 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x2000028c                        . = ALIGN (0x4)
 
-.bss            0x200002a4      0x40c load address 0x080085e0
-                0x200002a4                        _sbss = .
-                0x200002a4                        __bss_start__ = _sbss
+.bss            0x2000028c      0x40c load address 0x080085b8
+                0x2000028c                        _sbss = .
+                0x2000028c                        __bss_start__ = _sbss
  *(.bss)
- .bss           0x200002a4       0x1c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+ .bss           0x2000028c       0x1c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
  *(.bss*)
  .bss.Disp_Metering_Value_Scaler
-                0x200002c0       0x58 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x200002c0                Disp_Metering_Value_Scaler
+                0x200002a8       0x58 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x200002a8                Disp_Metering_Value_Scaler
  .bss.Disp_Metering_Value
-                0x20000318       0x2c ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x20000318                Disp_Metering_Value
+                0x20000300       0x2c ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x20000300                Disp_Metering_Value
  .bss.Disp_Setting_Write_Value
-                0x20000344       0x52 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x20000344                Disp_Setting_Write_Value
- *fill*         0x20000396        0x2 
+                0x2000032c       0x52 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x2000032c                Disp_Setting_Write_Value
+ *fill*         0x2000037e        0x2 
  .bss.Disp_RTC_Value
-                0x20000398        0x6 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
-                0x20000398                Disp_RTC_Value
- *fill*         0x2000039e        0x2 
+                0x20000380        0x6 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+                0x20000380                Disp_RTC_Value
+ *fill*         0x20000386        0x2 
  .bss.EEPROM_App_Flags
-                0x200003a0        0x4 ./Core/Src/EEPROM_App_Lib/EEPROM_App_Variables.o
-                0x200003a0                EEPROM_App_Flags
+                0x20000388        0x4 ./Core/Src/EEPROM_App_Lib/EEPROM_App_Variables.o
+                0x20000388                EEPROM_App_Flags
  .bss.EEPROM_App_Var
-                0x200003a4        0x2 ./Core/Src/EEPROM_App_Lib/EEPROM_App_Variables.o
-                0x200003a4                EEPROM_App_Var
- *fill*         0x200003a6        0x2 
+                0x2000038c        0x2 ./Core/Src/EEPROM_App_Lib/EEPROM_App_Variables.o
+                0x2000038c                EEPROM_App_Var
+ *fill*         0x2000038e        0x2 
  .bss.EEPROM_Drv_Var
-                0x200003a8       0x18 ./Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Variables.o
-                0x200003a8                EEPROM_Drv_Var
+                0x20000390       0x18 ./Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Variables.o
+                0x20000390                EEPROM_Drv_Var
  .bss.EEPROM_Read_Array
-                0x200003c0       0xff ./Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Variables.o
-                0x200003c0                EEPROM_Read_Array
- *fill*         0x200004bf        0x1 
+                0x200003a8       0xff ./Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Variables.o
+                0x200003a8                EEPROM_Read_Array
+ *fill*         0x200004a7        0x1 
  .bss.TimingDelay
-                0x200004c0        0x4 ./Core/Src/LCD16X2_Driver_Lib/LCD16X2_Driver_Variables.o
-                0x200004c0                TimingDelay
- .bss.State     0x200004c4        0x1 ./Core/Src/Main_Variables.o
-                0x200004c4                State
- *fill*         0x200004c5        0x3 
+                0x200004a8        0x4 ./Core/Src/LCD16X2_Driver_Lib/LCD16X2_Driver_Variables.o
+                0x200004a8                TimingDelay
+ .bss.State     0x200004ac        0x1 ./Core/Src/Main_Variables.o
+                0x200004ac                State
+ *fill*         0x200004ad        0x3 
  .bss.Disp_Cntrl
-                0x200004c8       0x28 ./Core/Src/Main_Variables.o
-                0x200004c8                Disp_Cntrl
+                0x200004b0       0x28 ./Core/Src/Main_Variables.o
+                0x200004b0                Disp_Cntrl
  .bss.RTC_Drv_Var
-                0x200004f0        0xc ./Core/Src/RTC_Drv_Lib/RTC_Drv_Variables.o
-                0x200004f0                RTC_Drv_Var
+                0x200004d8        0xc ./Core/Src/RTC_Drv_Lib/RTC_Drv_Variables.o
+                0x200004d8                RTC_Drv_Var
  .bss.RTC_Ext_Reg
-                0x200004fc       0x10 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Variables.o
-                0x200004fc                RTC_Ext_Reg
+                0x200004e4       0x10 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Variables.o
+                0x200004e4                RTC_Ext_Reg
  .bss.RTC_Drv_Ext_Time
-                0x2000050c        0x8 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Variables.o
-                0x2000050c                RTC_Drv_Ext_Time
+                0x200004f4        0x8 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Variables.o
+                0x200004f4                RTC_Drv_Ext_Time
  .bss.Switch_Detect_Incrmnt_Btn
-                0x20000514        0x4 ./Core/Src/Switch_Application_Lib/Switch_App_Variables.o
-                0x20000514                Switch_Detect_Incrmnt_Btn
+                0x200004fc        0x4 ./Core/Src/Switch_Application_Lib/Switch_App_Variables.o
+                0x200004fc                Switch_Detect_Incrmnt_Btn
  .bss.Switch_Detect_Decrmnt_Btn
-                0x20000518        0x4 ./Core/Src/Switch_Application_Lib/Switch_App_Variables.o
-                0x20000518                Switch_Detect_Decrmnt_Btn
+                0x20000500        0x4 ./Core/Src/Switch_Application_Lib/Switch_App_Variables.o
+                0x20000500                Switch_Detect_Decrmnt_Btn
  .bss.Switch_Detect_Set_Btn
-                0x2000051c        0x4 ./Core/Src/Switch_Application_Lib/Switch_App_Variables.o
-                0x2000051c                Switch_Detect_Set_Btn
+                0x20000504        0x4 ./Core/Src/Switch_Application_Lib/Switch_App_Variables.o
+                0x20000504                Switch_Detect_Set_Btn
  .bss.Switch_Detect_Enter_Btn
-                0x20000520        0x4 ./Core/Src/Switch_Application_Lib/Switch_App_Variables.o
-                0x20000520                Switch_Detect_Enter_Btn
+                0x20000508        0x4 ./Core/Src/Switch_Application_Lib/Switch_App_Variables.o
+                0x20000508                Switch_Detect_Enter_Btn
  .bss.Switch_Detect_Set_Enter_Btn
-                0x20000524        0x4 ./Core/Src/Switch_Application_Lib/Switch_App_Variables.o
-                0x20000524                Switch_Detect_Set_Enter_Btn
+                0x2000050c        0x4 ./Core/Src/Switch_Application_Lib/Switch_App_Variables.o
+                0x2000050c                Switch_Detect_Set_Enter_Btn
  .bss.U1Mast_App_Rec_Flags
-                0x20000528        0x4 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x20000528                U1Mast_App_Rec_Flags
+                0x20000510        0x4 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000510                U1Mast_App_Rec_Flags
  .bss.U1Mast_App_Send_Flags
-                0x2000052c        0xc ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x2000052c                U1Mast_App_Send_Flags
+                0x20000514        0xc ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000514                U1Mast_App_Send_Flags
  .bss.U1Mast_App_Send_Var
-                0x20000538        0x8 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x20000538                U1Mast_App_Send_Var
+                0x20000520        0x8 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000520                U1Mast_App_Send_Var
  .bss.V_Batt_L_Cutin
-                0x20000540        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
-                0x20000540                V_Batt_L_Cutin
- *fill*         0x20000542        0x2 
+                0x20000528        0x2 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+                0x20000528                V_Batt_L_Cutin
+ *fill*         0x2000052a        0x2 
  .bss.UART1_recvdata
-                0x20000544       0xfa ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
-                0x20000544                UART1_recvdata
- *fill*         0x2000063e        0x2 
+                0x2000052c       0xfa ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
+                0x2000052c                UART1_recvdata
+ *fill*         0x20000626        0x2 
  .bss.U1Mast_Drv_Rec_Flags
-                0x20000640        0x4 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
-                0x20000640                U1Mast_Drv_Rec_Flags
+                0x20000628        0x4 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
+                0x20000628                U1Mast_Drv_Rec_Flags
  .bss.U1Mast_Drv_Rec_Var
-                0x20000644        0x8 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
-                0x20000644                U1Mast_Drv_Rec_Var
+                0x2000062c        0x8 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
+                0x2000062c                U1Mast_Drv_Rec_Var
  .bss.UART1_Txdata
-                0x2000064c       0x5a ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
-                0x2000064c                UART1_Txdata
- *fill*         0x200006a6        0x2 
+                0x20000634       0x5a ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
+                0x20000634                UART1_Txdata
+ *fill*         0x2000068e        0x2 
  .bss.U1Mast_Drv_Send_Flags
-                0x200006a8        0x4 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
-                0x200006a8                U1Mast_Drv_Send_Flags
+                0x20000690        0x4 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
+                0x20000690                U1Mast_Drv_Send_Flags
  .bss.U1Mast_Drv_Send_Var
-                0x200006ac        0x4 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
-                0x200006ac                U1Mast_Drv_Send_Var
+                0x20000694        0x4 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
+                0x20000694                U1Mast_Drv_Send_Var
  *(COMMON)
-                0x200006b0                        . = ALIGN (0x4)
-                0x200006b0                        _ebss = .
-                0x200006b0                        __bss_end__ = _ebss
+                0x20000698                        . = ALIGN (0x4)
+                0x20000698                        _ebss = .
+                0x20000698                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200006b0      0x600 load address 0x080085e0
-                0x200006b0                        . = ALIGN (0x8)
+                0x20000698      0x600 load address 0x080085b8
+                0x20000698                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
-                0x200006b0                        PROVIDE (_end = .)
-                0x200008b0                        . = (. + _Min_Heap_Size)
- *fill*         0x200006b0      0x200 
-                0x20000cb0                        . = (. + _Min_Stack_Size)
- *fill*         0x200008b0      0x400 
-                0x20000cb0                        . = ALIGN (0x8)
+                0x20000698                        PROVIDE (_end = .)
+                0x20000898                        . = (. + _Min_Heap_Size)
+ *fill*         0x20000698      0x200 
+                0x20000c98                        . = (. + _Min_Stack_Size)
+ *fill*         0x20000898      0x400 
+                0x20000c98                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -4704,7 +4703,7 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
 LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libm.a
 LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libgcc.a
 
-.debug_info     0x00000000     0xd7bf
+.debug_info     0x00000000     0xd79e
  .debug_info    0x00000000      0x805 ./Core/Src/Display_Application_Lib/Display_App_Functions.o
  .debug_info    0x00000805      0x4ec ./Core/Src/Display_Application_Lib/Display_App_Variables.o
  .debug_info    0x00000cf1      0x418 ./Core/Src/EEPROM_App_Lib/EEPROM_App_Functions.o
@@ -4713,32 +4712,32 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_info    0x00001942      0x34b ./Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Variables.o
  .debug_info    0x00001c8d      0x6b8 ./Core/Src/LCD16X2_Driver_Lib/LCD16X2_Driver_Functions.o
  .debug_info    0x00002345       0xc2 ./Core/Src/LCD16X2_Driver_Lib/LCD16X2_Driver_Variables.o
- .debug_info    0x00002407      0x9b2 ./Core/Src/Main_Functions.o
- .debug_info    0x00002db9      0x2bb ./Core/Src/Main_Variables.o
- .debug_info    0x00003074      0x486 ./Core/Src/gpio.o
- .debug_info    0x000034fa      0x6c9 ./Core/Src/i2c.o
- .debug_info    0x00003bc3     0x104e ./Core/Src/main.o
- .debug_info    0x00004c11      0x535 ./Core/Src/rtc.o
- .debug_info    0x00005146      0x5c2 ./Core/Src/stm32g0xx_it.o
- .debug_info    0x00005708      0x2c1 ./Core/Src/system_stm32g0xx.o
- .debug_info    0x000059c9      0x95b ./Core/Src/tim.o
- .debug_info    0x00006324      0xc5d ./Core/Src/usart.o
- .debug_info    0x00006f81      0xadb ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
- .debug_info    0x00007a5c      0x412 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Variables.o
- .debug_info    0x00007e6e      0x225 ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
- .debug_info    0x00008093      0x24e ./Core/Src/Switch_Application_Lib/Switch_App_Variables.o
- .debug_info    0x000082e1      0x862 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
- .debug_info    0x00008b43      0x4ab ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
- .debug_info    0x00008fee      0x408 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.o
- .debug_info    0x000093f6      0x3d4 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
- .debug_info    0x000097ca       0x30 ./Core/Startup/startup_stm32g070cbtx.o
- .debug_info    0x000097fa      0x594 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
- .debug_info    0x00009d8e      0x5b7 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
- .debug_info    0x0000a345      0x719 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
- .debug_info    0x0000aa5e      0xcc8 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
- .debug_info    0x0000b726     0x10c2 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.o
- .debug_info    0x0000c7e8      0x764 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
- .debug_info    0x0000cf4c      0x873 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.o
+ .debug_info    0x00002407      0x991 ./Core/Src/Main_Functions.o
+ .debug_info    0x00002d98      0x2bb ./Core/Src/Main_Variables.o
+ .debug_info    0x00003053      0x486 ./Core/Src/gpio.o
+ .debug_info    0x000034d9      0x6c9 ./Core/Src/i2c.o
+ .debug_info    0x00003ba2     0x104e ./Core/Src/main.o
+ .debug_info    0x00004bf0      0x535 ./Core/Src/rtc.o
+ .debug_info    0x00005125      0x5c2 ./Core/Src/stm32g0xx_it.o
+ .debug_info    0x000056e7      0x2c1 ./Core/Src/system_stm32g0xx.o
+ .debug_info    0x000059a8      0x95b ./Core/Src/tim.o
+ .debug_info    0x00006303      0xc5d ./Core/Src/usart.o
+ .debug_info    0x00006f60      0xadb ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+ .debug_info    0x00007a3b      0x412 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Variables.o
+ .debug_info    0x00007e4d      0x225 ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
+ .debug_info    0x00008072      0x24e ./Core/Src/Switch_Application_Lib/Switch_App_Variables.o
+ .debug_info    0x000082c0      0x862 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+ .debug_info    0x00008b22      0x4ab ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+ .debug_info    0x00008fcd      0x408 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.o
+ .debug_info    0x000093d5      0x3d4 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
+ .debug_info    0x000097a9       0x30 ./Core/Startup/startup_stm32g070cbtx.o
+ .debug_info    0x000097d9      0x594 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
+ .debug_info    0x00009d6d      0x5b7 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
+ .debug_info    0x0000a324      0x719 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+ .debug_info    0x0000aa3d      0xcc8 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
+ .debug_info    0x0000b705     0x10c2 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.o
+ .debug_info    0x0000c7c7      0x764 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
+ .debug_info    0x0000cf2b      0x873 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.o
 
 .debug_abbrev   0x00000000     0x3321
  .debug_abbrev  0x00000000      0x1dd ./Core/Src/Display_Application_Lib/Display_App_Functions.o
@@ -5000,41 +4999,41 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x00013d62      0x171 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.o
  .debug_macro   0x00013ed3       0x54 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.o
 
-.debug_line     0x00000000    0x133d0
- .debug_line    0x00000000      0xd3d ./Core/Src/Display_Application_Lib/Display_App_Functions.o
- .debug_line    0x00000d3d      0x511 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
- .debug_line    0x0000124e      0x802 ./Core/Src/EEPROM_App_Lib/EEPROM_App_Functions.o
- .debug_line    0x00001a50      0x69d ./Core/Src/EEPROM_App_Lib/EEPROM_App_Variables.o
- .debug_line    0x000020ed      0xd0e ./Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Functions.o
- .debug_line    0x00002dfb      0x68c ./Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Variables.o
- .debug_line    0x00003487      0xc89 ./Core/Src/LCD16X2_Driver_Lib/LCD16X2_Driver_Functions.o
- .debug_line    0x00004110      0x512 ./Core/Src/LCD16X2_Driver_Lib/LCD16X2_Driver_Variables.o
- .debug_line    0x00004622     0x12f6 ./Core/Src/Main_Functions.o
- .debug_line    0x00005918      0x4f7 ./Core/Src/Main_Variables.o
- .debug_line    0x00005e0f      0x7ce ./Core/Src/gpio.o
- .debug_line    0x000065dd      0x79a ./Core/Src/i2c.o
- .debug_line    0x00006d77      0xe2f ./Core/Src/main.o
- .debug_line    0x00007ba6      0x72e ./Core/Src/rtc.o
- .debug_line    0x000082d4      0xaaf ./Core/Src/stm32g0xx_it.o
- .debug_line    0x00008d83      0x56f ./Core/Src/system_stm32g0xx.o
- .debug_line    0x000092f2      0x7cd ./Core/Src/tim.o
- .debug_line    0x00009abf      0xad9 ./Core/Src/usart.o
- .debug_line    0x0000a598      0xc5e ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
- .debug_line    0x0000b1f6      0x683 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Variables.o
- .debug_line    0x0000b879      0x783 ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
- .debug_line    0x0000bffc      0x68b ./Core/Src/Switch_Application_Lib/Switch_App_Variables.o
- .debug_line    0x0000c687      0xe84 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
- .debug_line    0x0000d50b      0x6b8 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
- .debug_line    0x0000dbc3      0xb52 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.o
- .debug_line    0x0000e715      0x827 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
- .debug_line    0x0000ef3c       0x7b ./Core/Startup/startup_stm32g070cbtx.o
- .debug_line    0x0000efb7      0x6e0 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
- .debug_line    0x0000f697      0x6f7 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
- .debug_line    0x0000fd8e      0xbc9 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
- .debug_line    0x00010957      0xce2 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
- .debug_line    0x00011639      0xc5b ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.o
- .debug_line    0x00012294      0x79d ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
- .debug_line    0x00012a31      0x99f ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.o
+.debug_line     0x00000000    0x133d1
+ .debug_line    0x00000000      0xd3e ./Core/Src/Display_Application_Lib/Display_App_Functions.o
+ .debug_line    0x00000d3e      0x511 ./Core/Src/Display_Application_Lib/Display_App_Variables.o
+ .debug_line    0x0000124f      0x802 ./Core/Src/EEPROM_App_Lib/EEPROM_App_Functions.o
+ .debug_line    0x00001a51      0x69d ./Core/Src/EEPROM_App_Lib/EEPROM_App_Variables.o
+ .debug_line    0x000020ee      0xd0e ./Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Functions.o
+ .debug_line    0x00002dfc      0x68c ./Core/Src/EEPROM_Drv_Lib/EEPROM_Drv_Variables.o
+ .debug_line    0x00003488      0xc89 ./Core/Src/LCD16X2_Driver_Lib/LCD16X2_Driver_Functions.o
+ .debug_line    0x00004111      0x512 ./Core/Src/LCD16X2_Driver_Lib/LCD16X2_Driver_Variables.o
+ .debug_line    0x00004623     0x12fc ./Core/Src/Main_Functions.o
+ .debug_line    0x0000591f      0x4f7 ./Core/Src/Main_Variables.o
+ .debug_line    0x00005e16      0x7ce ./Core/Src/gpio.o
+ .debug_line    0x000065e4      0x79a ./Core/Src/i2c.o
+ .debug_line    0x00006d7e      0xe2f ./Core/Src/main.o
+ .debug_line    0x00007bad      0x72e ./Core/Src/rtc.o
+ .debug_line    0x000082db      0xaaf ./Core/Src/stm32g0xx_it.o
+ .debug_line    0x00008d8a      0x56f ./Core/Src/system_stm32g0xx.o
+ .debug_line    0x000092f9      0x7cd ./Core/Src/tim.o
+ .debug_line    0x00009ac6      0xad9 ./Core/Src/usart.o
+ .debug_line    0x0000a59f      0xc5e ./Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.o
+ .debug_line    0x0000b1fd      0x683 ./Core/Src/RTC_Drv_Lib/RTC_Drv_Variables.o
+ .debug_line    0x0000b880      0x783 ./Core/Src/Switch_Application_Lib/Switch_App_Functions.o
+ .debug_line    0x0000c003      0x68b ./Core/Src/Switch_Application_Lib/Switch_App_Variables.o
+ .debug_line    0x0000c68e      0xe7e ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Functions.o
+ .debug_line    0x0000d50c      0x6b8 ./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o
+ .debug_line    0x0000dbc4      0xb52 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.o
+ .debug_line    0x0000e716      0x827 ./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o
+ .debug_line    0x0000ef3d       0x7b ./Core/Startup/startup_stm32g070cbtx.o
+ .debug_line    0x0000efb8      0x6e0 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.o
+ .debug_line    0x0000f698      0x6f7 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_i2c.o
+ .debug_line    0x0000fd8f      0xbc9 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o
+ .debug_line    0x00010958      0xce2 ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rtc.o
+ .debug_line    0x0001163a      0xc5b ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.o
+ .debug_line    0x00012295      0x79d ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usart.o
+ .debug_line    0x00012a32      0x99f ./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.o
 
 .debug_str      0x00000000    0x5f8d9
  .debug_str     0x00000000    0x5f8d9 ./Core/Src/Display_Application_Lib/Display_App_Functions.o
@@ -5054,7 +5053,7 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_str     0x0005f8d9        0x0 ./Core/Src/LCD16X2_Driver_Lib/LCD16X2_Driver_Variables.o
                               0x43425 (size before relaxing)
  .debug_str     0x0005f8d9        0x0 ./Core/Src/Main_Functions.o
-                              0x58c69 (size before relaxing)
+                              0x58c55 (size before relaxing)
  .debug_str     0x0005f8d9        0x0 ./Core/Src/Main_Variables.o
                               0x43265 (size before relaxing)
  .debug_str     0x0005f8d9        0x0 ./Core/Src/gpio.o
