@@ -379,41 +379,35 @@ void U1Mast_App_Populate_And_Send_Txdata_Array_With_Msg_Calib(void)
 	UART1_Txdata[0]='C';
 
 
-	UART1_Txdata[1] = (0xff & Calib_Value[1]);
-	UART1_Txdata[2] = (0xff & Calib_Value[1])>>8;
+	UART1_Txdata[1] = (0xff &  Calib_Value[1]);
+	UART1_Txdata[2] = (0xff & (Calib_Value[1] >>8));
 
-	UART1_Txdata[3] = (0xff & Calib_Value[2]);
-	UART1_Txdata[4] = (0xff & Calib_Value[2]) >>8;
+	UART1_Txdata[3] = (0xff &  Calib_Value[2]);
+	UART1_Txdata[4] = (0xff & (Calib_Value[2] >>8));
 
-	UART1_Txdata[5] = (0xff & Calib_Value[3]);
-	UART1_Txdata[6] = (0xff & Calib_Value[3]) >>8;
+	UART1_Txdata[5] = (0xff &  Calib_Value[3]);
+	UART1_Txdata[6] = (0xff & (Calib_Value[3] >>8));
 
-	UART1_Txdata[7] = (0xff & Calib_Value[4]);
-	UART1_Txdata[8] = (0xff & Calib_Value[4]) >>8;
+	UART1_Txdata[7] = (0xff &  Calib_Value[4]);
+	UART1_Txdata[8] = (0xff & (Calib_Value[4] >>8));
 
-	UART1_Txdata[9] = (0xff & Calib_Value[4]);
-	UART1_Txdata[10] = (0xff & Calib_Value[4]) >>8;
+	UART1_Txdata[9] = (0xff &  Calib_Value[5]);
+	UART1_Txdata[10] = (0xff & (Calib_Value[5] >>8));
 
-	UART1_Txdata[11] = (0xff & Calib_Value[4]);
-	UART1_Txdata[12] = (0xff & Calib_Value[4]) >>8;
+	UART1_Txdata[11] = (0xff &  Calib_Value[6]);
+	UART1_Txdata[12] = (0xff & (Calib_Value[6] >>8));
 
-//	UART1_Txdata[9] =  (Calib_Value[5]);
-//	UART1_Txdata[10] = ( Calib_Value[5]>>8);
-//
-//	UART1_Txdata[11] = (uint8_t)(Calib_Value[6]);
-//	UART1_Txdata[12] = (uint8_t)(Calib_Value[6]>>8);
+	UART1_Txdata[13] = (0xff &  Calib_Value[7]);
+	UART1_Txdata[14] = (0xff & (Calib_Value[7] >>8));
 
-	UART1_Txdata[13] = (0xff & Calib_Value[7]);
-	UART1_Txdata[14] = (0xff & Calib_Value[7]) >>8;
+	UART1_Txdata[15] = (0xff &  Calib_Value[8]);
+	UART1_Txdata[16] = (0xff & (Calib_Value[8] >>8));
 
-	UART1_Txdata[15] = (0xff & Calib_Value[8]);
-	UART1_Txdata[16] = (0xff & Calib_Value[8]) >>8;
+	UART1_Txdata[17] = (0xff &  Calib_Value[9]);
+	UART1_Txdata[18] = (0xff & (Calib_Value[9] >>8));
 
-	UART1_Txdata[17] = (0xff & Calib_Value[9]);
-	UART1_Txdata[18] = (0xff & Calib_Value[9]) >>8;
-
-	UART1_Txdata[19] = (0xff & Calib_Value[10]);
-	UART1_Txdata[20] = (0xff & Calib_Value[10]) >>8;
+	UART1_Txdata[19] = (0xff &  Calib_Value[10]);
+	UART1_Txdata[20] = (0xff & (Calib_Value[10] >>8));
 
 
 	UART1_Txdata[21]=U1Mast_Drv_crcFast(UART1_Txdata,U1Mast_Drv_Send_Var.Msg_Length-1);

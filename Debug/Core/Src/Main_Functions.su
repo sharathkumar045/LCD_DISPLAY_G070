@@ -5,7 +5,7 @@
 ../Core/Src/Main_Functions.c:360:6:Whileloop_Password_Fn	8	static
 ../Core/Src/Main_Functions.c:381:6:Whileloop_Calibration_Fn	8	static
 ../Core/Src/Main_Functions.c:438:6:Whileloop_Calib_Update_and_Send_Fn	8	static
-../Core/Src/Main_Functions.c:470:6:Calibration_Update	24	static
+../Core/Src/Main_Functions.c:470:6:Calibration_Update	16	static
 ../Core/Src/Main_Functions.c:491:6:Whileloop_Setting_Fn	8	static
 ../Core/Src/Main_Functions.c:543:6:Whileloop_Setting_Data_Rq_EEPROM_Fn	24	static
 ../Core/Src/Main_Functions.c:591:6:Whileloop_Save_Setting_in_EEPROM_Fn	16	static

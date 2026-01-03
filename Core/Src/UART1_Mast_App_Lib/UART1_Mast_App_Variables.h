@@ -89,6 +89,8 @@ extern volatile uint16_t V_Batt_L_Cutoff;
 
 extern volatile uint16_t I_Inv_Full_Load;
 
+extern volatile uint16_t Grid_KVA_Limit;
+
 extern  volatile uint16_t Relay_Off_Time;
 extern  volatile uint16_t Relay_On_Time;
 

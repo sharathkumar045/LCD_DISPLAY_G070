@@ -428,8 +428,8 @@ void Whileloop_Calibration_Fn()
 
 		}
 
-		Calib_Value[Disp_Cntrl.Calib_Index] = Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index];   //changed
-
+		Calib_Value[Disp_Cntrl.Calib_Index] = Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index];
+//        Calib_Value_Updated[Disp_Cntrl.Calib_Index] = Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index];
 		Calibration_State_Disp_Fn();
 
 	}
@@ -475,15 +475,15 @@ void Calibration_Update(void)
 	{
 		if(Disp_Metrng_Calib_Value[i] > 0)
 		{
-//			uint32_t temp;
-//
-//			temp = (uint32_t)Calib_Value[i] * (uint32_t)Disp_Desired_Metrng_Calib_Value[i];
-//			temp = temp/Disp_Metrng_Calib_Value[i];
-//			Calib_Value[i] = (uint16_t)temp;
+
+			uint32_t temp;
+			temp = (uint32_t)Calib_Value[i] * (uint32_t)Disp_Desired_Metrng_Calib_Value[i];
+			temp = temp/Disp_Metrng_Calib_Value[i];
+			Calib_Value[i] = (uint16_t)temp;
 
 
 
-			Calib_Value[i]  = Calib_Value[i] * (Disp_Desired_Metrng_Calib_Value[i]/Disp_Metrng_Calib_Value[i]);
+//			Calib_Value[i]  = Calib_Value[i] * ((float)Disp_Desired_Metrng_Calib_Value[i]/(float)Disp_Metrng_Calib_Value[i]);
 		}
 	}
 }

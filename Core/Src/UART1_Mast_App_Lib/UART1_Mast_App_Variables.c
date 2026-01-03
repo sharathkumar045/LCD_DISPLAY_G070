@@ -53,6 +53,8 @@
 
        volatile uint16_t I_Inv_Full_Load = 936;
 
+       volatile uint16_t Grid_KVA_Limit = 700;
+
        volatile uint16_t Relay_Off_Time = 18;
        volatile uint16_t Relay_On_Time = 17;
 
@@ -67,7 +69,7 @@
 
        volatile uint16_t I_PV_UL =1622 ;
 
-       volatile uint16_t V_Mains_H_Cutoff = 111; //calculate
+       volatile uint16_t V_Mains_H_Cutoff = 2550; //calculate
        volatile uint16_t V_Mains_H_Cutin = 2535;
 
        volatile uint16_t V_Mains_L_Cutoff = 1560;

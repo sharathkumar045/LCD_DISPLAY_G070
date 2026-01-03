@@ -156,7 +156,7 @@ int main(void)
   Disp_Cntrl.Calib_Index = 1;
   Disp_Cntrl.Mtrng_Index = 1;
 //
-//  RTC_Drv_Set_Intrnl_From_Ext();
+  RTC_Drv_Set_Intrnl_From_Ext();
 //
 //  EEPROM_App_Var.Mtrng_Energy_Cntr =  EEPROM_Drv_Read_Byte(EEPROM_App_Metering_Cntr_Start_Addr);
 //

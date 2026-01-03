@@ -39,13 +39,59 @@ void Metering_State_Disp_Fn(void)
 	LCDWriteString(" =");
 	if(Disp_Cntrl.Mtrng_Index == 9)
 	{
-		Printfloat((2000000/(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index]*Disp_Metering_Value_Scaler[Disp_Cntrl.Mtrng_Index])),3, 2);
+		float temp = (2000000/(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index]*Disp_Metering_Value_Scaler[Disp_Cntrl.Mtrng_Index]));
+		if(temp > 44 && temp < 56)
+		{
+			Printfloat(temp,3, 2);
+		}
+		else
+		{
+			temp = 0;
+			Printfloat(temp,3, 2);
+		}
 	}
+	else if(Disp_Cntrl.Mtrng_Index == 6)
+	{
+		if(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index]<V_Mains_L_Cutoff || Disp_Metering_Value[Disp_Cntrl.Mtrng_Index]>V_Mains_H_Cutoff )
+		{
+			Printfloat(0, 3, 2);
+		}
+		else
+		{
+			Printfloat(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index]*Disp_Metering_Value_Scaler[Disp_Cntrl.Mtrng_Index],3, 2);
+		}
+	}
+	else if(Disp_Cntrl.Mtrng_Index == 7)
+	{
+		if(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index]>I_Inv_Full_Load)
+		{
+			Printfloat(0, 3, 2);
+		}
+		else
+		{
+			Printfloat(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index]*Disp_Metering_Value_Scaler[Disp_Cntrl.Mtrng_Index],3, 2);
+		}
+
+	}
+	else if(Disp_Cntrl.Mtrng_Index == 10)
+	{
+		if(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index]>Grid_KVA_Limit)
+		{
+			Printfloat(0, 3, 2);
+		}
+		else
+		{
+			Printfloat(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index]*Disp_Metering_Value_Scaler[Disp_Cntrl.Mtrng_Index],3, 2);
+		}
+
+	}
+
 	else
 	{
 		Printfloat(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index]*Disp_Metering_Value_Scaler[Disp_Cntrl.Mtrng_Index],3, 2);
 	}
 
+//-------------------------------------------------------------------------------------------------------------------------------------------
 	LCD_Locate(2, 1);
 	for(int i = 0; i<8; i++)
 	{
@@ -54,8 +100,52 @@ void Metering_State_Disp_Fn(void)
 	LCDWriteString(" =");
 	if(Disp_Cntrl.Mtrng_Index == 8)
 	{
-		Printfloat((2000000/(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index + 1]*Disp_Metering_Value_Scaler[Disp_Cntrl.Mtrng_Index + 1])),3, 2);
+		float temp = (2000000/(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index+1]*Disp_Metering_Value_Scaler[Disp_Cntrl.Mtrng_Index+1]));
+		if(temp > 45 && temp < 55)
+		{
+			Printfloat(temp,3, 2);
+		}
+		else
+		{
+			temp = 0;
+			Printfloat(temp,3, 2);
+		}
 	}
+	else if(Disp_Cntrl.Mtrng_Index == 5)
+	{
+		if(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index+1]<V_Mains_L_Cutoff || Disp_Metering_Value[Disp_Cntrl.Mtrng_Index+1]>V_Mains_H_Cutoff )
+		{
+			Printfloat(0, 3, 2);
+		}
+		else
+		{
+			Printfloat(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index+1]*Disp_Metering_Value_Scaler[Disp_Cntrl.Mtrng_Index+1],3, 2);
+		}
+	}
+	else if(Disp_Cntrl.Mtrng_Index == 6)
+	{
+		if(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index+1]>I_Inv_Full_Load)
+		{
+			Printfloat(0, 3, 2);
+		}
+		else
+		{
+			Printfloat(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index+1]*Disp_Metering_Value_Scaler[Disp_Cntrl.Mtrng_Index+1],3, 2);
+		}
+	}
+	else if(Disp_Cntrl.Mtrng_Index == 9)
+	{
+		if(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index+1]>Grid_KVA_Limit)
+		{
+			Printfloat(0, 3, 2);
+		}
+		else
+		{
+			Printfloat(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index+1]*Disp_Metering_Value_Scaler[Disp_Cntrl.Mtrng_Index+1],3, 2);
+		}
+
+	}
+
 	else
 	{
 		Printfloat(Disp_Metering_Value[Disp_Cntrl.Mtrng_Index + 1]*Disp_Metering_Value_Scaler[Disp_Cntrl.Mtrng_Index + 1],3, 2);
