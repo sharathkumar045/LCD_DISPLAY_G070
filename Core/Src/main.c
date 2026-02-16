@@ -51,6 +51,9 @@
 #include "UART1_Mast_Drv_Functions.h"
 #include "UART1_Mast_Drv_Variables.h"
 
+#include "UART2_Slave_Functions.h"
+#include "UART2_Slave_Variables.h"
+
 #include "RTC_Drv_Functions.h"
 #include "RTC_Drv_Variables.h"
 /* USER CODE END Includes */
@@ -136,7 +139,7 @@ int main(void)
   Display_Variables_Init();
 
   TIM1->DIER |= TIM_DIER_UIE;  //Update interrupt enable
-  TIM1->CR1 |= TIM_CR1_CEN; // counter enable
+  TIM1->CR1 |= TIM_CR1_CEN;    // counter enable
 
   //GPIOB->BSRR |= LCD_Back_Light_Pin;
 
@@ -152,6 +155,7 @@ int main(void)
 
   State=Metering_Data_Rq;
   EEPROM_App_Flags.Read_Settings_Req = 1;
+//  State = Setting_Data_Rq;
   Disp_Cntrl.Settng_Index = 1;
   Disp_Cntrl.Calib_Index = 1;
   Disp_Cntrl.Mtrng_Index = 1;
@@ -168,6 +172,8 @@ int main(void)
 
   UART1_Enable_Receive_Interrupt; //Enabling the receive interrupt
   UART1_Enable;
+  UART2_Enable_Receive_Interrupt;
+  UART2_Enable;
 
   /* USER CODE END 2 */
 
@@ -188,6 +194,9 @@ int main(void)
 //		LCD_Clear_Display();
 
 	U1Mast_App_Store_Received_Data_In_Variables();
+	UART2_Store_Received_Data_In_Variables();
+	UART2_Request_Send_Message();
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

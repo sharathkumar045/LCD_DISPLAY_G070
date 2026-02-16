@@ -62,6 +62,9 @@ struct Display_Cntrl_Variables{
 	__IO uint16_t Prev_State;
 
 	__IO uint16_t Metering_Rqst_Count;
+	__IO uint16_t Setting_Send_Count;
+	__IO uint16_t Setting_Ack_Count;
+
 };
 extern struct Display_Cntrl_Variables Disp_Cntrl;
 

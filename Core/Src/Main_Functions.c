@@ -608,6 +608,7 @@ void Whileloop_Save_Setting_in_EEPROM_Fn()
 			EEPROM_Write_Array[i + 1] = (0xff & Disp_Setting_Write_Value[j])>>8;
 			j = j + 1;
 		}
+
 		EEPROM_Write_Array[79] = (uint8_t) U1Mast_Drv_crcFast(EEPROM_Write_Array,79);
 
 		EEPROM_App_Write_Settings();
@@ -905,7 +906,7 @@ void Main_Variables_Init(void)
 
 	Disp_Cntrl.Calib_Max_Index = 9;
 	Disp_Cntrl.Mtrng_Max_Index = 11;
-	Disp_Cntrl.Settng_Max_Index = 37;
+	Disp_Cntrl.Settng_Max_Index = 16; //37;
 	//Disp_Cntrl.Reset_Max_Index = 4;
 	Disp_Cntrl.Optn_Max_Index = 4;
 	Disp_Cntrl.RTC_Max_Index = 5;

@@ -38,6 +38,10 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.h \
  ../Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.h \
  ../Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.h \
+ ../Core/Src/UART2_Slave_Lib/UART2_Slave_Functions.h \
+ ../Core/Src/UART2_Slave_Lib/UART2_Slave_Variables.h \
+ ../Core/Src/UART2_Slave_Lib/UART2_Slave_Functions.h \
+ ../Core/Src/UART2_Slave_Lib/UART2_Slave_Variables.h \
  ../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.h \
  ../Core/Src/RTC_Drv_Lib/RTC_Drv_Variables.h
 ../Core/Inc/main.h:
@@ -85,5 +89,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.h:
 ../Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.h:
 ../Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.h:
+../Core/Src/UART2_Slave_Lib/UART2_Slave_Functions.h:
+../Core/Src/UART2_Slave_Lib/UART2_Slave_Variables.h:
+../Core/Src/UART2_Slave_Lib/UART2_Slave_Functions.h:
+../Core/Src/UART2_Slave_Lib/UART2_Slave_Variables.h:
 ../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.h:
 ../Core/Src/RTC_Drv_Lib/RTC_Drv_Variables.h:

@@ -50,6 +50,8 @@ void UART1_Master_Variables_Init(void);
   
 void Display_to_Inverter(void);
 
+void Updated_Settings_to_Inverter(void);
+
 #ifdef __cplusplus
 }
 #endif

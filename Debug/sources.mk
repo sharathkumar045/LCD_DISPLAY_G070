@@ -33,6 +33,7 @@ Core/Src/RTC_Drv_Lib \
 Core/Src/Switch_Application_Lib \
 Core/Src/UART1_Mast_App_Lib \
 Core/Src/UART1_Mast_Drv_Lib \
+Core/Src/UART2_Slave_Lib \
 Core/Startup \
 Drivers/STM32G0xx_HAL_Driver/Src \
 

@@ -51,23 +51,23 @@
        volatile uint16_t V_Batt_L_Cutin = 0;
        volatile uint16_t V_Batt_L_Cutoff = 2011;
 
-       volatile uint16_t I_Inv_Full_Load = 936;
+//       volatile uint16_t I_Inv_Full_Load = 936;
 
        volatile uint16_t Grid_KVA_Limit = 700;
 
-       volatile uint16_t Relay_Off_Time = 18;
-       volatile uint16_t Relay_On_Time = 17;
+//       volatile uint16_t Relay_Off_Time = 18;
+//       volatile uint16_t Relay_On_Time = 17;
 
-       volatile uint16_t I_grid_Export_Limit = 1950;
+//       volatile uint16_t I_grid_Export_Limit = 1950;
        volatile uint16_t I_grid_Import_Limit = 1950;
 
-       volatile uint16_t PV_H_Cutoff = 2527;
-       volatile uint16_t PV_H_Cutin = 2359;
+//       volatile uint16_t PV_H_Cutoff = 2527;
+//       volatile uint16_t PV_H_Cutin = 2359;
+//
+//       volatile uint16_t PV_L_Cutin = 505;
+//       volatile uint16_t PV_L_Cutoff = 421;
 
-       volatile uint16_t PV_L_Cutin = 505;
-       volatile uint16_t PV_L_Cutoff = 421;
-
-       volatile uint16_t I_PV_UL =1622 ;
+//       volatile uint16_t I_PV_UL =1622 ;
 
        volatile uint16_t V_Mains_H_Cutoff = 2550; //calculate
        volatile uint16_t V_Mains_H_Cutin = 2535;
@@ -76,6 +76,36 @@
        volatile uint16_t V_Mains_L_Cutin = 1755;
 
        volatile uint16_t PV_Power_Limit = 2000;
+
+       // additional Settings
+       volatile uint16_t V_grid_H_cutoff     = 2048;
+       volatile uint16_t V_grid_H_cutin      = 2048;
+
+       volatile uint16_t V_grid_L_cutoff     = 2048;
+       volatile uint16_t V_grid_L_cutin      = 2048;
+
+       volatile uint16_t DC_Link_V_UL        = 2048;
+
+       volatile uint16_t I_Inv_Full_Load     = 936;
+
+       volatile uint16_t Relay_Off_Time      = 18;
+       volatile uint16_t Relay_On_Time       = 17;
+
+       volatile uint16_t I_grid_Export_Limit = 1950;
+
+       volatile uint16_t V_PV_H_Cutoff         = 2527;
+       volatile uint16_t V_PV_H_Cutin          = 2359;
+
+       volatile uint16_t V_PV_L_Cutin          = 505;
+       volatile uint16_t V_PV_L_Cutoff         = 421;
+
+       volatile uint16_t I_PV_UL             = 2048;
+
+       volatile uint16_t Inverter_Rating     = 1950;
+
+       volatile uint16_t Display_on_off      = 2048;
+
+
 
      
        //struct U1_Mast_App_Msg_Send_Reqt_Flags U1Mast_App_Msg_Send_Reqt_Flags = {0};

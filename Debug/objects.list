@@ -26,6 +26,8 @@
 "./Core/Src/UART1_Mast_App_Lib/UART1_Mast_App_Variables.o"
 "./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Functions.o"
 "./Core/Src/UART1_Mast_Drv_Lib/UART1_Mast_Drv_Variables.o"
+"./Core/Src/UART2_Slave_Lib/UART2_Slave_Functions.o"
+"./Core/Src/UART2_Slave_Lib/UART2_Slave_Variables.o"
 "./Core/Startup/startup_stm32g070cbtx.o"
 "./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_dma.o"
 "./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_exti.o"

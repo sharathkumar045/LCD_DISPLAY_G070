@@ -3,7 +3,7 @@
 
 #include "i2c.h"
 
-#define EEPROM_Drv_Device_Addr 0b1010000<<1
+#define EEPROM_Drv_Device_Addr ((uint8_t)0b1010000<<1)
 
 #define EEPROM_Drv_PAGE_SIZE 128
 

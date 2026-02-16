@@ -21,5 +21,5 @@
 ../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:119:6:RTC_Drv_Set_Ext_Date_Time	1
 ../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:129:6:RTC_Drv_Ext_Write_Byte	8
 ../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:188:6:RTC_Drv_Set_Intrnl_From_Ext	1
-../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:207:6:RTC_Drv_Get_Intrnl_Date_Time	1
-../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:224:6:RTC_Drv_Intrnl_Alarm_Init	1
+../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:210:6:RTC_Drv_Get_Intrnl_Date_Time	1
+../Core/Src/RTC_Drv_Lib/RTC_Drv_Functions.c:227:6:RTC_Drv_Intrnl_Alarm_Init	1

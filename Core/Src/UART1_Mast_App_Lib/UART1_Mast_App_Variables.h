@@ -33,7 +33,7 @@
   extern struct U1_Mast_App_Rec_Var U1Mast_App_Rec_Var;
 
    
-#define UART1_Enable_Receive_Interrupt  USART2->CR1|=LL_USART_CR1_RXNEIE
+#define UART1_Enable_Receive_Interrupt  USART2->CR1|=USART_CR1_RXNEIE_RXFNEIE
 #define UART1_Enable  USART2->CR1|=USART_CR1_UE
 #define UART1_Transmit_Not_Complete !(USART2->ISR&LL_USART_ISR_TC)
 #define UART1_Clear_Receive_Flag USART2->CR1|=USART_RQR_RXFRQ
@@ -112,6 +112,36 @@ extern  volatile uint16_t V_Mains_L_Cutoff;
 extern  volatile uint16_t V_Mains_L_Cutin ;
 
 extern  volatile uint16_t PV_Power_Limit;
+
+// Additional Settings
+extern volatile uint16_t V_grid_H_cutoff;
+extern volatile uint16_t V_grid_H_cutin;
+
+extern volatile uint16_t V_grid_L_cutoff;
+extern volatile uint16_t V_grid_L_cutin;
+
+extern volatile uint16_t DC_Link_V_UL;
+
+extern volatile uint16_t I_Inv_Full_Load;
+
+extern volatile uint16_t Relay_Off_Time;
+extern volatile uint16_t Relay_On_Time;
+
+extern volatile uint16_t I_grid_Export_Limit;
+
+extern volatile uint16_t V_PV_H_Cutoff;
+extern volatile uint16_t V_PV_H_Cutin;
+
+extern volatile uint16_t V_PV_L_Cutin;
+extern volatile uint16_t V_PV_L_Cutoff;
+
+extern volatile uint16_t I_PV_UL;
+
+extern volatile uint16_t Inverter_Rating;
+
+extern volatile uint16_t Display_on_off;
+
+
 
       
 #ifdef __cplusplus

@@ -36,7 +36,8 @@ extern __IO uint16_t Disp_Setting_Write_Value[41];
 
 extern __IO float Disp_Metering_Value_Scaler[];
 extern const float Disp_Calib_Value_Scaler[];
-extern const float Disp_Setting_Value_Scaler[41];
+//extern const float Disp_Setting_Value_Scaler[41];
+extern const float Disp_Setting_Value_Scaler[18];
 
 extern const char Disp_RTC_Name[][10];
 extern __IO int8_t Disp_RTC_Value[];

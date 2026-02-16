@@ -35,13 +35,17 @@
 //  __IO char Disp_New_Calib_Name[5][15] = {"NewBattVol","NewBattAmp","NewGridVol","NewGridAmp","NewPVVol"};
 //  __IO uint16_t Disp_New_Calib_Value[5] = {2000,1500,3000,1000,2500};
 
-  const char Disp_Setting_Name[41][20] = {"S","V_Inv_Ref","V_Inv_UL","V_Inv_LL","PV_Chg_V_Bat_Ref","V_Bat_H_Cutoff",
-		  	  	  	  	  	  	  	  	  "V_Bat_H_Cutin","V_Bat_L_Cutin","V_Bat_L_Cutoff","I_Bat_Chg_UL","I_Inv_Full_Load",
-										  "I_Inv_110_Load","I_Inv_125_Load","I_Inv_150_Load","I_Grid_Exp_Limit","I_Grid_Imp_Limit",
-										  "PV_H_Cutoff","PV_H_Cutin","PV_L_Cutin","PV_L_Cutoff","I_PV_UL","V_Mains_H_Cutoff",
-										  "V_Mains_H_Cutin","V_Mains_L_Cutin","V_Mains_L_Cutoff","V_Bat_Boost_Ref","V_Bat_Equlz_Ref",
-										  "Bat_Equlztn_Rq","PV_Power_Limit","Mode","Grid_Conct_BV","Grid_Chg_Strt_BV",
-										  "Grid_Chg_Stop_BV","Grid_Dis_BV","Grid_Dis._I_Bat","I_Chrg","Grid_Boost_Ref","Grid_Float_Ref","CRC"}; // 73
+//  const char Disp_Setting_Name[41][20] = {"S","V_Inv_Ref","V_Inv_UL","V_Inv_LL","PV_Chg_V_Bat_Ref","V_Bat_H_Cutoff",
+//		  	  	  	  	  	  	  	  	  "V_Bat_H_Cutin","V_Bat_L_Cutin","V_Bat_L_Cutoff","I_Bat_Chg_UL","I_Inv_Full_Load",
+//										  "I_Inv_110_Load","I_Inv_125_Load","I_Inv_150_Load","I_Grid_Exp_Limit","I_Grid_Imp_Limit",
+//										  "PV_H_Cutoff","PV_H_Cutin","PV_L_Cutin","PV_L_Cutoff","I_PV_UL","V_Mains_H_Cutoff",
+//										  "V_Mains_H_Cutin","V_Mains_L_Cutin","V_Mains_L_Cutoff","V_Bat_Boost_Ref","V_Bat_Equlz_Ref",
+//										  "Bat_Equlztn_Rq","PV_Power_Limit","Mode","Grid_Conct_BV","Grid_Chg_Strt_BV",
+//										  "Grid_Chg_Stop_BV","Grid_Dis_BV","Grid_Dis._I_Bat","I_Chrg","Grid_Boost_Ref","Grid_Float_Ref","CRC"}; // 73
+
+  const char Disp_Setting_Name[41][20] = {"S","V_GRID_H_Cutoff","V_GRID_H_Cutin","V_GRID_L_Cutin","V_GRID_L_Cutoff","DC_Link_V_UL",
+                                           "I_FULL_LOAD","RELAY_OFF_TIME","RELAY_ON_TIME","GRID_EXP_LIM","V_PV_H_Cutoff","V_PV_H_Cutin",
+                                            "V_PV_L_Cutin","V_PV_L_Cutoff","I_PV_UL","INV_RATING","DISP_ON_OFF","CRC"};
 
   __IO uint16_t Disp_Setting_Value[41] = {'S',1831,2165,1337,2765,3519,3368,2162,2011,2458,1639,1803,2049,2459,
 		  	  	  	  	  	  	  	  	  1950,1950,2527,2359,505,421,1622,2633,2535,1755,1560,2900,2500,0,2000,
@@ -56,8 +60,10 @@
 
 //  const float Disp_Calib_Value_Scaler[12] = {0,0.25,0.2,0.25,0.35,0.25,0.2,0.15,0.2,0.3,0.2,0};
   const float Disp_Calib_Value_Scaler[12] = {0,0.25,0.2,0.023,0.35,0.18228,0.023,0.119,0,0.3,0.2,0};
-  const float Disp_Setting_Value_Scaler[41] = {0,0.2,0.15,0.2,0.3,0.2,0.2,0.15,0.2,0.3,0.2,0.2,0.15,0.2,0.3,0.2,0.2,0.15,0.2,0.3,0.2,
-		  	  	  	  	  	  	  	  	  	  	0.2,0.15,0.2,0.3,0.2,0.2,0.15,0.2,0.3,0.2,0.2,0.15,0.2,0.3,0.2,0.2,0.15,0.2,0.3,0};
+//  const float Disp_Setting_Value_Scaler[41] = {0,0.2,0.15,0.2,0.3,0.2,0.2,0.15,0.2,0.3,0.2,0.2,0.15,0.2,0.3,0.2,0.2,0.15,0.2,0.3,0.2,
+//		  	  	  	  	  	  	  	  	  	  	0.2,0.15,0.2,0.3,0.2,0.2,0.15,0.2,0.3,0.2,0.2,0.15,0.2,0.3,0.2,0.2,0.15,0.2,0.3,0};
+  const float Disp_Setting_Value_Scaler[18] = {0,0.119,0.119,0.119,0.119,0.26,0.023,0.2,0.2,0.011210,0.18228,0.18228,0.18228,0.18228,
+                                                   0.023,0.2,0.2,0};
 
 
   const char Disp_RTC_Name[6][10] = {"Seconds","Minutes","Hours","Day","Month","Year"};

@@ -1,4 +1,4 @@
-/* USER CODE BEGIN Header */
+ /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file    stm32g0xx_it.c
@@ -33,6 +33,9 @@
 
 #include "UART1_Mast_Drv_Functions.h"
 #include "UART1_Mast_Drv_Variables.h"
+
+#include "UART2_Slave_Functions.h"
+#include "UART2_Slave_Variables.h"
 
 #include "RTC_Drv_Functions.h"
 #include "RTC_Drv_Variables.h"
@@ -185,6 +188,21 @@ void TIM1_BRK_UP_TRG_COM_IRQHandler(void)
 //		RTC_Alarm_Clr_Flag;
 //	}
 
+//	if(State == Setting_Send_Data)
+//	{
+//		Disp_Cntrl.Setting_Send_Count = Disp_Cntrl.Setting_Send_Count+1;
+//		if(U1Mast_App_Rec_Flags.Received_Message_s==1)
+//		{
+//			Disp_Cntrl.Setting_Ack_Count = 5;
+//		}
+//		if(Disp_Cntrl.Setting_Send_Count >= Three_Sec && Disp_Cntrl.Setting_Ack_Count < 5)
+//		{
+//			State = Setting_Send_Data;
+//			Disp_Cntrl.Setting_Send_Count = 0;
+//			Disp_Cntrl.Setting_Ack_Count++;
+//		}
+//	}
+
 	if(State == Metering)
 	{
 		Disp_Cntrl.Metering_Rqst_Count = Disp_Cntrl.Metering_Rqst_Count + 1;
@@ -206,6 +224,7 @@ void TIM1_BRK_UP_TRG_COM_IRQHandler(void)
 //	}
 //	U1Mast_Drv_Send_Function_Inside_Timer_Interrupt();
 	U1Mast_Drv_Send_Function_Inside_Timer_Interrupt();
+	UART2_Send_Function_Inside_Timer_Interrupt();
 
 
 	U1Mast_App_Send_Var.Ack_Wait_Time_cntr = U1Mast_App_Send_Var.Ack_Wait_Time_cntr -1;
@@ -239,6 +258,7 @@ void USART2_IRQHandler(void)
 {
   /* USER CODE BEGIN USART2_IRQn 0 */
 	U1Mast_Drv_Receive_ISR_Program();
+
   /* USER CODE END USART2_IRQn 0 */
   /* USER CODE BEGIN USART2_IRQn 1 */
 
@@ -252,6 +272,7 @@ void USART3_4_IRQHandler(void)
 {
   /* USER CODE BEGIN USART3_4_IRQn 0 */
 
+	UART2_Receive_ISR_Program();
   /* USER CODE END USART3_4_IRQn 0 */
   /* USER CODE BEGIN USART3_4_IRQn 1 */
 

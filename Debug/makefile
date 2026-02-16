@@ -11,6 +11,7 @@ RM := rm -rf
 -include sources.mk
 -include Drivers/STM32G0xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
+-include Core/Src/UART2_Slave_Lib/subdir.mk
 -include Core/Src/UART1_Mast_Drv_Lib/subdir.mk
 -include Core/Src/UART1_Mast_App_Lib/subdir.mk
 -include Core/Src/Switch_Application_Lib/subdir.mk

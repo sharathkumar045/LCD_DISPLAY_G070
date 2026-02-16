@@ -188,15 +188,110 @@ void Calibration_State_Disp_Fn(void)
 		LCDData(Disp_Metrng_Calib_Name[Disp_Cntrl.Calib_Index][i]);
 	}
 	LCDWriteString(" =");
-	Printfloat(Disp_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]*Disp_Calib_Value_Scaler[Disp_Cntrl.Calib_Index],3, 2);
 
+	if(Disp_Cntrl.Calib_Index==1)
+	{
+		if(Disp_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]<V_INV_LL || Disp_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]>V_INV_UL)              //V INV
+		{
+			Printfloat(0, 3, 2);
+		}
+		else
+		{
+			Printfloat(Disp_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]*Disp_Calib_Value_Scaler[Disp_Cntrl.Calib_Index],3, 2);
+		}
+	}
+	else if(Disp_Cntrl.Calib_Index==2)
+	{
+		if(Disp_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]<V_Batt_L_Cutoff || Disp_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]>V_Batt_H_Cutoff) //V BAT
+		{
+			Printfloat(0, 3, 2);
+		}
+		else
+		{
+			Printfloat(Disp_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]*Disp_Calib_Value_Scaler[Disp_Cntrl.Calib_Index],3, 2);
+		}
+	}
+	else if(Disp_Cntrl.Calib_Index==3)
+	{
+		if(Disp_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]>I_Inv_Full_Load)                                                                      //I INV
+		{
+			Printfloat(0, 3, 2);
+		}
+		else
+		{
+			Printfloat(Disp_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]*Disp_Calib_Value_Scaler[Disp_Cntrl.Calib_Index],3, 2);
+		}
+	}
+	else if(Disp_Cntrl.Calib_Index==7)
+	{
+		if(Disp_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]<V_Mains_L_Cutoff || Disp_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]>V_Mains_H_Cutoff) //V mains
+		{
+			Printfloat(0, 3, 2);
+		}
+		else
+		{
+			Printfloat(Disp_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]*Disp_Calib_Value_Scaler[Disp_Cntrl.Calib_Index],3, 2);
+		}
+	}
+	else
+	{
+		Printfloat(Disp_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]*Disp_Calib_Value_Scaler[Disp_Cntrl.Calib_Index],3, 2);
+	}
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	LCD_Locate(2, 1);
 	for(int i = 0; i<8; i++)
 	{
 		LCDData(Disp_Desired_Metrng_Calib_Name[Disp_Cntrl.Calib_Index][i]);
 	}
 	LCDWriteString(" =");
-	Printfloat(Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]*Disp_Calib_Value_Scaler[Disp_Cntrl.Calib_Index],3, 2);
+	if(Disp_Cntrl.Calib_Index==1)
+		{
+			if(Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]<V_INV_LL || Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]>V_INV_UL)              //V INV
+			{
+				Printfloat(0, 3, 2);
+			}
+			else
+			{
+				Printfloat(Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]*Disp_Calib_Value_Scaler[Disp_Cntrl.Calib_Index],3, 2);
+			}
+		}
+		else if(Disp_Cntrl.Calib_Index==2)
+		{
+			if(Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]<V_Batt_L_Cutoff || Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]>V_Batt_H_Cutoff) //V BAT
+			{
+				Printfloat(0, 3, 2);
+			}
+			else
+			{
+				Printfloat(Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]*Disp_Calib_Value_Scaler[Disp_Cntrl.Calib_Index],3, 2);
+			}
+		}
+		else if(Disp_Cntrl.Calib_Index==3)
+		{
+			if(Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]>I_Inv_Full_Load)                                                                      //I INV
+			{
+				Printfloat(0, 3, 2);
+			}
+			else
+			{
+				Printfloat(Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]*Disp_Calib_Value_Scaler[Disp_Cntrl.Calib_Index],3, 2);
+			}
+		}
+		else if(Disp_Cntrl.Calib_Index==7)
+		{
+			if(Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]<V_Mains_L_Cutoff || Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]>V_Mains_H_Cutoff) //V mains
+			{
+				Printfloat(0, 3, 2);
+			}
+			else
+			{
+				Printfloat(Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]*Disp_Calib_Value_Scaler[Disp_Cntrl.Calib_Index],3, 2);
+			}
+		}
+		else
+		{
+			Printfloat(Disp_Desired_Metrng_Calib_Value[Disp_Cntrl.Calib_Index]*Disp_Calib_Value_Scaler[Disp_Cntrl.Calib_Index],3, 2);
+		}
 }
 
 void CalibRq_Rq_Data_State_Disp_Fn(void)
@@ -336,5 +431,5 @@ void Display_Variables_Init()
 	Disp_Metering_Value_Scaler[9] = 1;//T Grid
 	Disp_Metering_Value_Scaler[10] = 0.011210;                   //0.0056;                               //Grid KVA
 	Disp_Metering_Value_Scaler[11] = 0.01;//Export KWH
-	Disp_Metering_Value_Scaler[12] = 1;//Import KWH
+	Disp_Metering_Value_Scaler[12] = 0.01;//Import KWH
 }

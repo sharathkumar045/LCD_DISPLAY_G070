@@ -85,9 +85,11 @@ void Whileloop_Setting_Send_Data_Fn(void)
 		U1Mast_App_Send_Flags.Meterng_Communication_eror=0;
 		U1Mast_Drv_Send_Flags.Send_Enable=0;
 
-		//		Populate array_with_S;
+//		Populate array_with_S;
 //		U1Mast_App_Populate_And_Send_Txdata_Array_With_Message_Settings();
-		Display_to_Inverter();
+//		Display_to_Inverter();
+		Updated_Settings_to_Inverter();
+
 		U1Mast_App_Send_Var.Ack_Wait_Time_cntr=U1Mast_Ack_Wait_Time; // 1 seconds ; This time includes sending and receiving both so calculate appropriately
 
 		Disp_Cntrl.First_Time_State_Entry = 0;
@@ -122,6 +124,132 @@ void Whileloop_Setting_Send_Data_Fn(void)
 		}
 	}
 }
+
+
+void Updated_Settings_to_Inverter(void)
+{
+	U1Mast_Drv_Send_Var.Msg_Length    = 44;
+	U1Mast_Drv_Send_Flags.Send_Enable = 1;
+
+	UART1_Txdata[0]  = 'S';
+
+//	UART1_Txdata[1]  =  (V_grid_H_cutoff & 0x00FF);
+//	UART1_Txdata[2]  =  (V_grid_H_cutoff & 0xFF00) >> 8;
+//
+//	UART1_Txdata[3]  =  (V_grid_H_cutin & 0x00FF);
+//	UART1_Txdata[4]  =  (V_grid_H_cutin & 0xFF00) >> 8;
+//
+//	UART1_Txdata[5]  =  (V_grid_L_cutin & 0x00FF);
+//	UART1_Txdata[6]  =  (V_grid_L_cutin & 0xFF00) >> 8;
+//
+//	UART1_Txdata[7]  =  (V_grid_L_cutoff & 0x00FF);
+//	UART1_Txdata[8]  =  (V_grid_L_cutoff & 0xFF00) >> 8;
+//
+//	UART1_Txdata[9]  =  (DC_Link_V_UL & 0x00FF);
+//	UART1_Txdata[10] =  (DC_Link_V_UL & 0xFF00) >> 8;
+//
+//	UART1_Txdata[11] =  (I_Inv_Full_Load & 0x00FF);
+//	UART1_Txdata[12] =  (I_Inv_Full_Load & 0xFF00) >> 8;
+//
+//	UART1_Txdata[13] =  (Relay_Off_Time & 0x00FF);
+//	UART1_Txdata[14] =  (Relay_Off_Time & 0xFF00) >> 8;
+//
+//	UART1_Txdata[15] =  (Relay_On_Time & 0x00FF);
+//	UART1_Txdata[16] =  (Relay_On_Time & 0xFF00) >> 8;
+//
+//	UART1_Txdata[17] =  (I_grid_Export_Limit & 0x00FF);
+//	UART1_Txdata[18] =  (I_grid_Export_Limit & 0xFF00) >> 8;
+//
+//	UART1_Txdata[19] =  (V_PV_H_Cutoff & 0x00FF);
+//	UART1_Txdata[20] =  (V_PV_H_Cutoff & 0xFF00) >> 8;
+//
+//	UART1_Txdata[21] =  (V_PV_H_Cutin & 0x00FF);
+//	UART1_Txdata[22] =  (V_PV_H_Cutin & 0xFF00) >> 8;
+//
+//	UART1_Txdata[23] =  (V_PV_L_Cutin & 0x00FF);
+//	UART1_Txdata[24] =  (V_PV_L_Cutin & 0xFF00) >> 8;
+//
+//	UART1_Txdata[25] =  (V_PV_L_Cutoff & 0x00FF);
+//	UART1_Txdata[26] =  (V_PV_L_Cutoff & 0xFF00) >> 8;
+//
+//	UART1_Txdata[27] =  (I_PV_UL & 0x00FF);
+//	UART1_Txdata[28] =  (I_PV_UL & 0xFF00) >> 8;
+//
+//	UART1_Txdata[29] =  (Inverter_Rating & 0x00FF);
+//	UART1_Txdata[30] =  (Inverter_Rating & 0xFF00) >> 8;
+//
+//	UART1_Txdata[31] =  (Display_on_off & 0x00FF);
+//	UART1_Txdata[32] =  (Display_on_off & 0xFF00) >> 8;
+
+	UART1_Txdata[1]  =  (Disp_New_Setting_Value[1] & 0x00FF);        // V_grid_H_cutoff
+	UART1_Txdata[2]  =  (Disp_New_Setting_Value[1] & 0xFF00) >> 8;
+
+	UART1_Txdata[3]  =  (Disp_New_Setting_Value[2] & 0x00FF);        // V_grid_H_cutin
+	UART1_Txdata[4]  =  (Disp_New_Setting_Value[2] & 0xFF00) >> 8;
+
+	UART1_Txdata[5]  =  (Disp_New_Setting_Value[3] & 0x00FF);        // V_grid_L_cutin
+	UART1_Txdata[6]  =  (Disp_New_Setting_Value[3] & 0xFF00) >> 8;
+
+	UART1_Txdata[7]  =  (Disp_New_Setting_Value[4] & 0x00FF);       // V_grid_L_cutoff
+	UART1_Txdata[8]  =  (Disp_New_Setting_Value[4] & 0xFF00) >> 8;
+
+	UART1_Txdata[9]  =  (Disp_New_Setting_Value[5] & 0x00FF);       // DC_Link_V_UL
+	UART1_Txdata[10] =  (Disp_New_Setting_Value[5] & 0xFF00) >> 8;
+
+	UART1_Txdata[11] =  (Disp_New_Setting_Value[6] & 0x00FF);       // I_Inv_Full_Load
+	UART1_Txdata[12] =  (Disp_New_Setting_Value[6] & 0xFF00) >> 8;
+
+	UART1_Txdata[13] =  (Disp_New_Setting_Value[7] & 0x00FF);       // Relay_Off_Time
+	UART1_Txdata[14] =  (Disp_New_Setting_Value[7] & 0xFF00) >> 8;
+
+	UART1_Txdata[15] =  (Disp_New_Setting_Value[8] & 0x00FF);       // Relay_On_Time
+	UART1_Txdata[16] =  (Disp_New_Setting_Value[8] & 0xFF00) >> 8;
+
+	UART1_Txdata[17] =  (Disp_New_Setting_Value[9] & 0x00FF);       // I_grid_Export_Limit
+	UART1_Txdata[18] =  (Disp_New_Setting_Value[9] & 0xFF00) >> 8;
+
+	UART1_Txdata[19] =  (Disp_New_Setting_Value[10] & 0x00FF);      // V_PV_H_Cutoff
+	UART1_Txdata[20] =  (Disp_New_Setting_Value[10] & 0xFF00) >> 8;
+
+	UART1_Txdata[21] =  (Disp_New_Setting_Value[11] & 0x00FF);      // V_PV_H_Cutin
+	UART1_Txdata[22] =  (Disp_New_Setting_Value[11] & 0xFF00) >> 8;
+
+	UART1_Txdata[23] =  (Disp_New_Setting_Value[12] & 0x00FF);      // V_PV_L_Cutin
+	UART1_Txdata[24] =  (Disp_New_Setting_Value[12] & 0xFF00) >> 8;
+
+	UART1_Txdata[25] =  (Disp_New_Setting_Value[13] & 0x00FF);      // V_PV_L_Cutoff
+	UART1_Txdata[26] =  (Disp_New_Setting_Value[13] & 0xFF00) >> 8;
+
+	UART1_Txdata[27] =  (Disp_New_Setting_Value[14] & 0x00FF);      // I_PV_UL
+	UART1_Txdata[28] =  (Disp_New_Setting_Value[14] & 0xFF00) >> 8;
+
+	UART1_Txdata[29] =  (Disp_New_Setting_Value[15] & 0x00FF);      // Inverter_Rating
+	UART1_Txdata[30] =  (Disp_New_Setting_Value[15] & 0xFF00) >> 8;
+
+	UART1_Txdata[31] =  (Disp_New_Setting_Value[16] & 0x00FF);      // Display_on_off
+	UART1_Txdata[32] =  (Disp_New_Setting_Value[16] & 0xFF00) >> 8;
+
+
+
+
+	UART1_Txdata[33] = 0;
+	UART1_Txdata[34] = 0;
+	UART1_Txdata[35] = 0;
+	UART1_Txdata[36] = 0;
+	UART1_Txdata[37] = 0;
+	UART1_Txdata[38] = 0;
+	UART1_Txdata[39] = 0;
+	UART1_Txdata[40] = 0;
+	UART1_Txdata[41] = 0;
+	UART1_Txdata[42] = 0;
+
+	UART1_Txdata[43] = U1Mast_Drv_crcFast(UART1_Txdata, (U1Mast_Drv_Send_Var.Msg_Length-1));
+	U1Mast_Drv_Send_Flags.Send_Enable=1;
+	U1Mast_Drv_Send_Var.Array_Index=0;
+
+
+}
+
 
 void Display_to_Inverter(){
 	U1Mast_Drv_Send_Var.Msg_Length=50;
@@ -354,9 +482,11 @@ void U1Mast_App_Populate_And_Send_Txdata_Array_With_Zeros_Calib(void)
 
 	UART1_Txdata[0]='C';
 
-	for (int  i = 1; i<21 ;i++)
+	for (int  i = 1; i<21 ;i=i+2)
 	{
-		UART1_Txdata[i] = 0;
+//		UART1_Txdata[i] = 0;
+		UART1_Txdata[i]=(0x00FF & 2048);
+		UART1_Txdata[i+1]=((0xFF00 & 2048)>>8);
 	}
 	U1Mast_Drv_Send_Var.Msg_Length=22; //M and crc
 	UART1_Txdata[21]=U1Mast_Drv_crcFast(UART1_Txdata,U1Mast_Drv_Send_Var.Msg_Length-1);
@@ -554,17 +684,25 @@ void U1Mast_App_Use_Received_Data_m(void)
 		j = j+1;
 	}
 
+	Disp_Metrng_Calib_Value[1] = 0;                                         //V_INV
+	Disp_Metrng_Calib_Value[2] = Disp_Metering_Value[1];                    //V_BAT
 	Disp_Metrng_Calib_Value[3] = Disp_Metering_Value[7];                    //I_INV
+	Disp_Metrng_Calib_Value[4] = 0;                                         //I_BAT
 	Disp_Metrng_Calib_Value[5] = Disp_Metering_Value[2];                    //V_PV
 	Disp_Metrng_Calib_Value[6] = Disp_Metering_Value[3];                    //I_PV
 	Disp_Metrng_Calib_Value[7] = Disp_Metering_Value[6];                    //V_MAINS
-	Disp_Metrng_Calib_Value[8] = Disp_Metering_Value[8];                    //I_MAINS
+	Disp_Metrng_Calib_Value[8] = 0;                                         //I_MAINS_CT
+	Disp_Metrng_Calib_Value[9] = 0;                                         //I_INV_CT
 
+	Disp_Desired_Metrng_Calib_Value[1] = 0;                                  //V_INV
+	Disp_Desired_Metrng_Calib_Value[2] = Disp_Metering_Value[1];             //V_BAT
 	Disp_Desired_Metrng_Calib_Value[3] = Disp_Metering_Value[7];             //I_INV
+	Disp_Desired_Metrng_Calib_Value[4] = 0;                                  //I_BAT
 	Disp_Desired_Metrng_Calib_Value[5] = Disp_Metering_Value[2];             //V_PV
 	Disp_Desired_Metrng_Calib_Value[6] = Disp_Metering_Value[3];             //I_PV
 	Disp_Desired_Metrng_Calib_Value[7] = Disp_Metering_Value[6];             //V_MAINS
-	Disp_Desired_Metrng_Calib_Value[8] = Disp_Metering_Value[8];             //I_MAINS
+	Disp_Desired_Metrng_Calib_Value[8] = 0;                                  //I_MAINS_CT
+	Disp_Desired_Metrng_Calib_Value[9] = 0;                                  //I_INV_CT
 
 
 }

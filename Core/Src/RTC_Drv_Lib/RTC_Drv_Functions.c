@@ -195,6 +195,9 @@ void RTC_Drv_Set_Intrnl_From_Ext(void)
 	RTC_TimeStruct.Hours = RTC_Ext_Reg.Hour_Cntr;
 	RTC_TimeStruct.Minutes = RTC_Ext_Reg.Minute_Cntr;
 	RTC_TimeStruct.Seconds = RTC_Ext_Reg.Second_Cntr;
+//	RTC_TimeStruct.Hours = 0x12;
+//	RTC_TimeStruct.Minutes = 0x35;
+//	RTC_TimeStruct.Seconds = 0x00;
 	LL_RTC_TIME_Init(RTC, LL_RTC_FORMAT_BCD, &RTC_TimeStruct);
 
 	RTC_DateStruct.Month = RTC_Ext_Reg.Month_Cntr;
@@ -206,19 +209,19 @@ void RTC_Drv_Set_Intrnl_From_Ext(void)
 
 void RTC_Drv_Get_Intrnl_Date_Time(void)
 {
-	  RTC_Drv_Intrnl_Time.Seconds=__LL_RTC_CONVERT_BCD2BIN(LL_RTC_TIME_GetSecond(RTC));
+	  RTC_Drv_Intrnl_Time.Seconds =__LL_RTC_CONVERT_BCD2BIN(LL_RTC_TIME_GetSecond(RTC));
 
-	  RTC_Drv_Intrnl_Time.Minutes=__LL_RTC_CONVERT_BCD2BIN(LL_RTC_TIME_GetMinute(RTC));
+	  RTC_Drv_Intrnl_Time.Minutes =__LL_RTC_CONVERT_BCD2BIN(LL_RTC_TIME_GetMinute(RTC));
 
-	  RTC_Drv_Intrnl_Time.Hours=__LL_RTC_CONVERT_BCD2BIN(LL_RTC_TIME_GetHour(RTC));
+	  RTC_Drv_Intrnl_Time.Hours   =__LL_RTC_CONVERT_BCD2BIN(LL_RTC_TIME_GetHour(RTC));
 
-	  RTC_Drv_Intrnl_Time.Day=__LL_RTC_CONVERT_BCD2BIN(LL_RTC_DATE_GetDay(RTC));
+	  RTC_Drv_Intrnl_Time.Day     =__LL_RTC_CONVERT_BCD2BIN(LL_RTC_DATE_GetDay(RTC));
 
-	  RTC_Drv_Intrnl_Time.Week=__LL_RTC_CONVERT_BCD2BIN(LL_RTC_DATE_GetWeekDay(RTC));
+	  RTC_Drv_Intrnl_Time.Week    =__LL_RTC_CONVERT_BCD2BIN(LL_RTC_DATE_GetWeekDay(RTC));
 
-	  RTC_Drv_Intrnl_Time.Month=__LL_RTC_CONVERT_BCD2BIN(LL_RTC_DATE_GetMonth(RTC));
+	  RTC_Drv_Intrnl_Time.Month   =__LL_RTC_CONVERT_BCD2BIN(LL_RTC_DATE_GetMonth(RTC));
 
-	  RTC_Drv_Intrnl_Time.Year=__LL_RTC_CONVERT_BCD2BIN(LL_RTC_DATE_GetYear(RTC));
+	  RTC_Drv_Intrnl_Time.Year    =__LL_RTC_CONVERT_BCD2BIN(LL_RTC_DATE_GetYear(RTC));
 }
 
 void RTC_Drv_Intrnl_Alarm_Init(void)
@@ -232,6 +235,7 @@ void RTC_Drv_Intrnl_Alarm_Init(void)
 	  RTC->WPR = 0xCA; /* (1) */
 	  RTC->WPR = 0x53; /* (1) */
 	  RTC->CR &=~ RTC_CR_ALRAE; /* (2) */
+//	  while((RTC->ICSR & RTC_ICSR_ALRAWF));
 //	  while ((RTC->ISR & RTC_ISR_ALRAWF) != RTC_ISR_ALRAWF) /* (3) */
 //	  {
 //	  /* add time out here for a robust application */
